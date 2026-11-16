@@ -19,8 +19,9 @@ async def show_topics(message: Message, runtime, user_language: str = "kk") -> N
 @router.callback_query(F.data.startswith("topics:"))
 async def topics_page(callback: CallbackQuery, runtime, user_language: str = "kk") -> None:
     page = max(0, int(callback.data.split(":")[1]))
-    await callback.message.edit_reply_markup(
-        reply_markup=topics_keyboard(runtime.dataset.topics, page, user_language)
+    await callback.message.edit_text(
+        translations(user_language)["topics"],
+        reply_markup=topics_keyboard(runtime.dataset.topics, page, user_language),
     )
     await callback.answer()
 

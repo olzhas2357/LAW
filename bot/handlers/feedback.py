@@ -3,6 +3,7 @@ from aiogram.filters import Command
 from aiogram.types import CallbackQuery, Message
 
 from bot.i18n import messages as translations
+from bot.keyboards import main_menu
 
 router = Router(name="feedback")
 
@@ -26,7 +27,7 @@ async def rate_answer(callback: CallbackQuery, runtime, user_language: str = "kk
             int(record_id) or None,
             rating,
         )
-        await callback.message.answer(translations(user_language)["thanks"])
+        await callback.message.answer(translations(user_language)["thanks"], reply_markup=main_menu(user_language))
     await callback.answer()
 
 
@@ -34,4 +35,4 @@ async def rate_answer(callback: CallbackQuery, runtime, user_language: str = "kk
 async def feedback_reason(message: Message, runtime, user_language: str = "kk") -> None:
     record_id = runtime.feedback_pending.pop(message.from_user.id, None)
     await runtime.repository.add_feedback(message.from_user.id, record_id, 0, message.text)
-    await message.answer(translations(user_language)["thanks"])
+    await message.answer(translations(user_language)["thanks"], reply_markup=main_menu(user_language))

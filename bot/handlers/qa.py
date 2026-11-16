@@ -27,6 +27,7 @@ async def deliver_record(
     user_id: int,
     original_question: str | None = None,
     context_records=None,
+    user_language: str = "kk",
 ) -> None:
     answer_text = record.answer
     if runtime.chat_provider and runtime.settings.use_llm:
@@ -42,8 +43,11 @@ async def deliver_record(
         except Exception:
             logger.exception("LLM answer failed; returning dataset answer")
     text = format_answer(answer_text, record, runtime.disclaimer)
-    for chunk in split_message(text):
-        await message.answer(chunk, reply_markup=rating_keyboard(record.id, "kk"))
+    chunks = split_message(text)
+    for chunk in chunks[:-1]:
+        await message.answer(chunk)
+    if chunks:
+        await message.answer(chunks[-1], reply_markup=rating_keyboard(record.id, user_language))
 
 
 @router.message(F.text)
@@ -77,6 +81,7 @@ async def handle_question(message: Message, runtime, user_language: str = "kk") 
             message.from_user.id,
             safe_text,
             [result.record for result in results[:3]],
+            user_language,
         )
         return
     if best and best.score >= runtime.settings.search_low_threshold:
@@ -100,22 +105,22 @@ async def handle_question(message: Message, runtime, user_language: str = "kk") 
 
 
 @router.callback_query(F.data.startswith("pick:"))
-async def pick_match(callback: CallbackQuery, runtime) -> None:
+async def pick_match(callback: CallbackQuery, runtime, user_language: str = "kk") -> None:
     record_id = int(callback.data.split(":")[1])
     record = runtime.records_by_id.get(record_id)
     if record:
         await runtime.repository.log_question(callback.from_user.id, record.question, record.id, 1)
-        await deliver_record(callback.message, runtime, record, callback.from_user.id)
+        await deliver_record(callback.message, runtime, record, callback.from_user.id, user_language=user_language)
     await callback.answer()
 
 
 @router.callback_query(F.data.startswith("q:"))
-async def pick_topic_question(callback: CallbackQuery, runtime) -> None:
+async def pick_topic_question(callback: CallbackQuery, runtime, user_language: str = "kk") -> None:
     record_id = int(callback.data.split(":")[1])
     record = runtime.records_by_id.get(record_id)
     if record:
         await runtime.repository.log_question(callback.from_user.id, record.question, record.id, 1)
-        await deliver_record(callback.message, runtime, record, callback.from_user.id)
+        await deliver_record(callback.message, runtime, record, callback.from_user.id, user_language=user_language)
     await callback.answer()
 
 

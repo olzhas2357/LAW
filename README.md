@@ -27,6 +27,8 @@ USE_LLM=true
 
 Для webhook задайте `WEBHOOK_URL` (публичный HTTPS адрес) и при необходимости `WEBHOOK_SECRET`; без `WEBHOOK_URL` включается polling. `/topics`, `/emergency`, `/about`, `/feedback`, `/lang`, `/delete_my_data` доступны пользователям. Команды `/stats`, `/unanswered`, `/reload`, `/broadcast` работают только для ID из `ADMIN_IDS` (список через запятую).
 
+После ответа кнопка «Главное меню» позволяет вернуться к темам, экстренной помощи, справке и выбору языка без повторного `/start`. Меню также доступно через `/menu`, а вопрос можно отправить сразу текстом.
+
 Голосовые сообщения распознаются через Whisper, если включены `VOICE_ENABLED=true` и OpenAI provider. Встроенный inline mode нужно отдельно активировать в настройках бота через BotFather.
 
 ## Проверки
