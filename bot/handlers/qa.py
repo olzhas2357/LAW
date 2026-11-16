@@ -8,9 +8,7 @@ from bot.keyboards import matches_keyboard, rating_keyboard
 from bot.services.formatter import format_answer, split_message
 from bot.services.safety import (
     EMERGENCY_NUMBERS,
-    EMERGENCY_NUMBERS_RU,
     SUPPORT_TEXT,
-    SUPPORT_TEXT_RU,
     contains_sensitive_data,
     is_emergency,
     mask_pii,
@@ -27,7 +25,6 @@ async def deliver_record(
     user_id: int,
     original_question: str | None = None,
     context_records=None,
-    user_language: str = "kk",
 ) -> None:
     answer_text = record.answer
     if runtime.chat_provider and runtime.settings.use_llm:
@@ -47,26 +44,24 @@ async def deliver_record(
     for chunk in chunks[:-1]:
         await message.answer(chunk)
     if chunks:
-        await message.answer(chunks[-1], reply_markup=rating_keyboard(record.id, user_language))
+        await message.answer(chunks[-1], reply_markup=rating_keyboard(record.id))
 
 
 @router.message(F.text)
-async def handle_question(message: Message, runtime, user_language: str = "kk") -> None:
+async def handle_question(message: Message, runtime) -> None:
     text = message.text.strip()
     if not text:
         return
     if len(text) > 4000:
-        await message.answer(translations(user_language)["too_long"])
+        await message.answer(translations()["too_long"])
         return
     emergency = is_emergency(text)
     if emergency:
-        numbers = EMERGENCY_NUMBERS_RU if user_language == "ru" else EMERGENCY_NUMBERS
-        support = SUPPORT_TEXT_RU if user_language == "ru" else SUPPORT_TEXT
-        await message.answer(f"{numbers}\n\n{support}")
+        await message.answer(f"{EMERGENCY_NUMBERS}\n\n{SUPPORT_TEXT}")
     sensitive = contains_sensitive_data(text)
     safe_text = mask_pii(text)
     if sensitive:
-        await message.answer(translations(user_language)["sensitive"])
+        await message.answer(translations()["sensitive"])
 
     await runtime.repository.register_user(message.from_user.id)
     await message.bot.send_chat_action(message.chat.id, "typing")
@@ -81,7 +76,6 @@ async def handle_question(message: Message, runtime, user_language: str = "kk") 
             message.from_user.id,
             safe_text,
             [result.record for result in results[:3]],
-            user_language,
         )
         return
     if best and best.score >= runtime.settings.search_low_threshold:
@@ -93,39 +87,39 @@ async def handle_question(message: Message, runtime, user_language: str = "kk") 
             track_unanswered=False,
         )
         await message.answer(
-            translations(user_language)["ask"],
-            reply_markup=matches_keyboard(results, user_language),
+            translations()["ask"],
+            reply_markup=matches_keyboard(results),
         )
         return
     await runtime.repository.log_question(message.from_user.id, safe_text, None, best.score if best else None)
     await message.answer(
-        translations(user_language)["no_answer"] + f"\n\nℹ️ {runtime.disclaimer}",
-        reply_markup=runtime.topic_menu(user_language),
+        translations()["no_answer"] + f"\n\nℹ️ {runtime.disclaimer}",
+        reply_markup=runtime.topic_menu(),
     )
 
 
 @router.callback_query(F.data.startswith("pick:"))
-async def pick_match(callback: CallbackQuery, runtime, user_language: str = "kk") -> None:
+async def pick_match(callback: CallbackQuery, runtime) -> None:
     record_id = int(callback.data.split(":")[1])
     record = runtime.records_by_id.get(record_id)
     if record:
         await runtime.repository.log_question(callback.from_user.id, record.question, record.id, 1)
-        await deliver_record(callback.message, runtime, record, callback.from_user.id, user_language=user_language)
+        await deliver_record(callback.message, runtime, record, callback.from_user.id)
     await callback.answer()
 
 
 @router.callback_query(F.data.startswith("q:"))
-async def pick_topic_question(callback: CallbackQuery, runtime, user_language: str = "kk") -> None:
+async def pick_topic_question(callback: CallbackQuery, runtime) -> None:
     record_id = int(callback.data.split(":")[1])
     record = runtime.records_by_id.get(record_id)
     if record:
         await runtime.repository.log_question(callback.from_user.id, record.question, record.id, 1)
-        await deliver_record(callback.message, runtime, record, callback.from_user.id, user_language=user_language)
+        await deliver_record(callback.message, runtime, record, callback.from_user.id)
     await callback.answer()
 
 
 @router.message(F.voice)
-async def voice_message(message: Message, runtime, user_language: str = "kk") -> None:
+async def voice_message(message: Message, runtime) -> None:
     if not runtime.settings.voice_enabled:
         await message.answer("Дауыстық хабарламаны тану әзірге өшірулі. Сұрағыңызды мәтінмен жіберіңіз.")
         return
@@ -146,7 +140,6 @@ async def voice_message(message: Message, runtime, user_language: str = "kk") ->
         await handle_question(
             message.model_copy(update={"text": transcript}),
             runtime,
-            user_language,
         )
     except Exception:
         logger.exception("Voice transcription failed")

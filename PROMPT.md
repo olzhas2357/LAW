@@ -38,7 +38,7 @@
 
 # ПАЙДАЛАНУШЫ ИНТЕРФЕЙСІ (UX)
 - `/start`: қысқа сәлемдесу, бот не істейтіні, «заңгер емеспін» ескертуі, мәзір.
-- `/help`, `/topics` (34 тақырыпты инлайн батырмамен, беттеп көрсет), `/emergency` (шұғыл нөмірлер), `/about`, `/feedback`, `/lang` (қазақша/орысша интерфейс; жауаптар деректегі тілде).
+- `/help`, `/topics` (34 тақырыпты инлайн батырмамен, беттеп көрсет), `/emergency` (шұғыл нөмірлер), `/about`, `/feedback`; интерфейс тек қазақ тілінде болады.
 - Тақырып таңдағанда сол тақырыптың сұрақтарын беттеп көрсет, таңдаған сұраққа жауап бер.
 - Әр жауапқа 👍/👎 батырмалары. 👎 болса, себебін сұра және `feedback` кестесіне жаз.
 - Typing индикаторы, ұзын жауапты 4096 символ шегінде бөл, Markdown/HTML экрандауды дұрыс жаса.
@@ -57,9 +57,9 @@ bot/
 main.py, config.py
 handlers/ (start, qa, topics, feedback, admin, inline)
 services/ (search.py, safety.py, llm.py, formatter.py, data_loader.py)
-middlewares/ (throttle, logging, user_lang)
+middlewares/ (throttle, logging)
 db/ (models, repo)
-i18n/ (kk.json, ru.json)
+i18n/ (kk.json)
 data/legal_qa_bot.json
 tests/
 scripts/ (build_index.py, evaluate.py)

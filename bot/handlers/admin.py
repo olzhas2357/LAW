@@ -60,11 +60,11 @@ async def unanswered(message: Message, runtime) -> None:
 
 
 @router.message(Command("reload"))
-async def reload_data(message: Message, runtime, user_language: str = "kk") -> None:
+async def reload_data(message: Message, runtime) -> None:
     if not is_admin(message.from_user.id, runtime):
         return
     await runtime.reload()
-    await message.answer(translations(user_language)["refresh_done"])
+    await message.answer(translations()["refresh_done"])
 
 
 @router.message(Command("broadcast"))

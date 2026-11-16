@@ -6,6 +6,5 @@ ROOT = Path(__file__).parent
 
 
 @lru_cache
-def messages(language: str) -> dict[str, str]:
-    path = ROOT / ("ru.json" if language == "ru" else "kk.json")
-    return json.loads(path.read_text(encoding="utf-8"))
+def messages() -> dict[str, str]:
+    return json.loads((ROOT / "kk.json").read_text(encoding="utf-8"))

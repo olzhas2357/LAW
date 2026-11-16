@@ -13,7 +13,6 @@ from bot.handlers import admin, feedback, inline, qa, start, topics
 from bot.keyboards import topics_keyboard
 from bot.middlewares.logging import SafeLoggingMiddleware
 from bot.middlewares.throttle import ThrottleMiddleware
-from bot.middlewares.user_lang import UserLanguageMiddleware
 from bot.services.data_loader import LegalDataset, load_dataset
 from bot.services.llm import ChatProvider, EmbeddingProvider, create_providers
 from bot.services.search import HybridSearch
@@ -62,8 +61,8 @@ class Runtime:
         self.broadcast_pending: dict[int, str] = {}
         self.logger = logger
 
-    def topic_menu(self, language: str):
-        return topics_keyboard(self.dataset.topics, 0, language)
+    def topic_menu(self):
+        return topics_keyboard(self.dataset.topics, 0)
 
     async def reload(self) -> None:
         dataset = load_dataset(self.settings.data_path)
@@ -104,9 +103,6 @@ def create_dispatcher(runtime: Runtime) -> Dispatcher:
     dispatcher.callback_query.middleware(throttle)
     dispatcher.inline_query.middleware(throttle)
     dispatcher.message.middleware(SafeLoggingMiddleware())
-    language_middleware = UserLanguageMiddleware(runtime.repository)
-    dispatcher.message.middleware(language_middleware)
-    dispatcher.callback_query.middleware(language_middleware)
     dispatcher.include_routers(start.router, admin.router, topics.router, feedback.router, qa.router, inline.router)
     return dispatcher
 

@@ -18,7 +18,6 @@ class Repository:
                 PRAGMA journal_mode=WAL;
                 CREATE TABLE IF NOT EXISTS users (
                     user_id INTEGER PRIMARY KEY,
-                    language TEXT NOT NULL DEFAULT 'kk',
                     created_at TEXT NOT NULL
                 );
                 CREATE TABLE IF NOT EXISTS questions (
@@ -59,31 +58,13 @@ class Repository:
             await db.commit()
         await self.prune_logs(90)
 
-    async def register_user(self, user_id: int) -> str:
+    async def register_user(self, user_id: int) -> None:
         async with aiosqlite.connect(self.path) as db:
             await db.execute(
                 "INSERT OR IGNORE INTO users(user_id, created_at) VALUES (?, ?)",
                 (user_id, self._now()),
             )
-            cursor = await db.execute("SELECT language FROM users WHERE user_id = ?", (user_id,))
-            row = await cursor.fetchone()
             await db.commit()
-            return row[0] if row else "kk"
-
-    async def set_language(self, user_id: int, language: str) -> None:
-        async with aiosqlite.connect(self.path) as db:
-            await db.execute(
-                "INSERT INTO users(user_id, language, created_at) VALUES (?, ?, ?) "
-                "ON CONFLICT(user_id) DO UPDATE SET language=excluded.language",
-                (user_id, language, self._now()),
-            )
-            await db.commit()
-
-    async def get_language(self, user_id: int) -> str:
-        async with aiosqlite.connect(self.path) as db:
-            cursor = await db.execute("SELECT language FROM users WHERE user_id = ?", (user_id,))
-            row = await cursor.fetchone()
-            return row[0] if row else "kk"
 
     async def log_question(
         self,

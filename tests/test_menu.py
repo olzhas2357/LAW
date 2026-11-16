@@ -24,15 +24,14 @@ class KeyboardTests(unittest.TestCase):
         self.record = self.dataset.records[0]
 
     def test_navigation_and_feedback_buttons(self):
-        for language in ("kk", "ru"):
-            rating = rating_keyboard(self.record.id, language)
-            self.assertEqual(callbacks(rating), [f"rate:1:{self.record.id}", f"rate:0:{self.record.id}", "menu:main"])
-            self.assertIn("menu:main", callbacks(topics_keyboard(self.dataset.topics, 0, language)))
-            questions = question_keyboard([self.record], 0, language)
-            self.assertIn("topics:0", callbacks(questions))
-            self.assertIn("menu:main", callbacks(questions))
-            matches = matches_keyboard([SearchResult(self.record, 0.6)], language)
-            self.assertIn("menu:main", callbacks(matches))
+        rating = rating_keyboard(self.record.id)
+        self.assertEqual(callbacks(rating), [f"rate:1:{self.record.id}", f"rate:0:{self.record.id}", "menu:main"])
+        self.assertIn("menu:main", callbacks(topics_keyboard(self.dataset.topics, 0)))
+        questions = question_keyboard([self.record], 0)
+        self.assertIn("topics:0", callbacks(questions))
+        self.assertIn("menu:main", callbacks(questions))
+        matches = matches_keyboard([SearchResult(self.record, 0.6)])
+        self.assertIn("menu:main", callbacks(matches))
 
 
 class MenuHandlerTests(unittest.IsolatedAsyncioTestCase):
@@ -55,10 +54,10 @@ class MenuHandlerTests(unittest.IsolatedAsyncioTestCase):
             answer=AsyncMock(),
         )
 
-    async def test_answer_has_localized_menu_and_ratings(self):
-        await deliver_record(self.message, self.runtime, self.record, 42, user_language="ru")
+    async def test_answer_has_kazakh_menu_and_ratings(self):
+        await deliver_record(self.message, self.runtime, self.record, 42)
         markup = self.message.answer.await_args.kwargs["reply_markup"]
-        self.assertEqual(markup.inline_keyboard[-1][0].text, "🏠 Главное меню")
+        self.assertEqual(markup.inline_keyboard[-1][0].text, "🏠 Басты мәзір")
         self.assertEqual(callbacks(markup)[:2], [f"rate:1:{self.record.id}", f"rate:0:{self.record.id}"])
 
     async def test_long_answer_has_buttons_on_final_chunk(self):
@@ -70,24 +69,24 @@ class MenuHandlerTests(unittest.IsolatedAsyncioTestCase):
         self.assertIn("menu:main", callbacks(calls[-1].kwargs["reply_markup"]))
 
     async def test_menu_callback_cancels_pending_feedback_and_shows_menu(self):
-        await menu_callback(self.callback, self.runtime, "ru")
+        await menu_callback(self.callback, self.runtime)
         self.assertNotIn(42, self.runtime.feedback_pending)
         markup = self.message.answer.await_args.kwargs["reply_markup"]
-        self.assertEqual(callbacks(markup), ["topics:0", "emergency", "menu:help", "menu:lang"])
+        self.assertEqual(callbacks(markup), ["topics:0", "emergency", "menu:help"])
         self.callback.answer.assert_awaited_once()
 
-    async def test_topic_and_match_selection_preserve_language(self):
+    async def test_topic_and_match_selection_use_kazakh_menu(self):
         for handler, prefix in ((pick_match, "pick"), (pick_topic_question, "q")):
             with self.subTest(handler=prefix):
                 self.callback.data = f"{prefix}:{self.record.id}"
-                await handler(self.callback, self.runtime, "ru")
+                await handler(self.callback, self.runtime)
                 markup = self.message.answer.await_args.kwargs["reply_markup"]
-                self.assertEqual(markup.inline_keyboard[-1][0].text, "🏠 Главное меню")
+                self.assertEqual(markup.inline_keyboard[-1][0].text, "🏠 Басты мәзір")
 
     async def test_return_to_topics_updates_title(self):
         self.callback.data = "topics:0"
-        await topics_page(self.callback, self.runtime, "ru")
-        self.assertEqual(self.message.edit_text.await_args.args[0], "Выберите тему:")
+        await topics_page(self.callback, self.runtime)
+        self.assertEqual(self.message.edit_text.await_args.args[0], "Тақырыпты таңдаңыз:")
         self.assertIn("menu:main", callbacks(self.message.edit_text.await_args.kwargs["reply_markup"]))
 
 
