@@ -1,0 +1,52 @@
+import re
+import unicodedata
+
+EMERGENCY_NUMBERS = (
+    "🚨 Шұғыл көмек: 102 — полиция, 103 — жедел жәрдем, "
+    "112 — бірыңғай құтқару қызметі, 111 — балалар мен отбасыға көмек."
+)
+EMERGENCY_NUMBERS_RU = (
+    "🚨 Экстренная помощь: 102 — полиция, 103 — скорая помощь, "
+    "112 — единая служба спасения, 111 — помощь детям и семье."
+)
+SUPPORT_TEXT = (
+    "Сіз бұған кінәлі емессіз. Қауіпсіз жерге өтіп, сенімді адамға хабарласыңыз. "
+    "Қазір қауіп төніп тұрса, шұғыл қызметке бірден қоңырау шалыңыз."
+)
+SUPPORT_TEXT_RU = (
+    "Вы не виноваты. Перейдите в безопасное место и сообщите человеку, которому доверяете. "
+    "Если опасность непосредственная — сразу позвоните в экстренную службу."
+)
+
+_DANGER_TERMS = (
+    "ұрамын", "ұрады", "ұрып", "ұрды", "соққы", "зорлық", "шантаж", "қорқытып", "өлтіремін",
+    "өлтір", "өзіме қол жұмса", "суицид", "өміріме қауіп", "ұрлап", "зорлады",
+    "жыныстық зорлық", "избивает", "побои", "насилие", "шантаж", "угрожает",
+    "убью", "убить", "самоубийств", "покончить с собой", "похит", "изнасил",
+    "опасность жизни", "бьет", "бьёт", "избил", "избивает", "избивают",
+    "изнасил", "домог", "угроз", "покончить", "не хочу жить", "хочу умереть",
+    "вред себе", "порезать себя", "меня заставляют",
+)
+
+
+def normalize_for_safety(text: str) -> str:
+    normalized = unicodedata.normalize("NFKC", text).casefold().replace("ё", "е")
+    return re.sub(r"[^\w\s]", " ", normalized)
+
+
+def is_emergency(text: str) -> bool:
+    normalized = normalize_for_safety(text)
+    return any(term in normalized for term in _DANGER_TERMS)
+
+
+def mask_pii(text: str) -> str:
+    """Redact common direct identifiers before logging or external API calls."""
+    masked = re.sub(r"\b[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}\b", "[email]", text)
+    masked = re.sub(r"(?<!\d)(?:\+?7|8)?[\s(.-]*\d{3}[\s).-]*\d{3}[\s.-]*\d{2}[\s.-]*\d{2}(?!\d)", "[телефон]", masked)
+    masked = re.sub(r"(?<!\d)\d{12}(?!\d)", "[ЖСН]", masked)
+    masked = re.sub(r"(?<!\d)(?:\d[ -]*?){13,19}(?!\d)", "[карта]", masked)
+    return masked
+
+
+def contains_sensitive_data(text: str) -> bool:
+    return mask_pii(text) != text

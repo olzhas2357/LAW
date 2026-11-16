@@ -1,0 +1,10 @@
+services:
+  legal-bot:
+    build: .
+    env_file: .env
+    restart: unless-stopped
+    volumes:
+      - ./bot.db:/app/bot.db
+      - ./cache:/app/cache
+    ports:
+      - "${PORT:-8080}:8080"

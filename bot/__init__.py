@@ -1,0 +1,1 @@
+"""Telegram legal-information bot."""
