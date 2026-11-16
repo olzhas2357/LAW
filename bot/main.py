@@ -1,5 +1,6 @@
 import asyncio
 import logging
+import sys
 from collections import defaultdict
 
 from aiogram import Bot, Dispatcher
@@ -18,6 +19,18 @@ from bot.services.llm import ChatProvider, EmbeddingProvider, create_providers
 from bot.services.search import HybridSearch
 
 logger = logging.getLogger(__name__)
+
+
+def configure_logging() -> None:
+    standard = logging.StreamHandler(sys.stdout)
+    standard.addFilter(lambda record: record.levelno < logging.ERROR)
+    errors = logging.StreamHandler(sys.stderr)
+    errors.setLevel(logging.ERROR)
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s %(levelname)s %(name)s: %(message)s",
+        handlers=[standard, errors],
+    )
 
 
 class Runtime:
@@ -143,7 +156,7 @@ async def run_webhook(runtime: Runtime) -> None:
 
 
 async def main() -> None:
-    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
+    configure_logging()
     settings = get_settings()
     if not settings.bot_token:
         raise RuntimeError("BOT_TOKEN is required; copy .env.example to .env and configure it")
