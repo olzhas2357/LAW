@@ -1,11 +1,14 @@
 import logging
+from collections.abc import Sequence
 
 from aiogram import F, Router
 from aiogram.types import CallbackQuery, Message
 
 from bot.i18n import messages as translations
 from bot.keyboards import matches_keyboard, rating_keyboard
+from bot.services.data_loader import LegalRecord
 from bot.services.formatter import format_answer, split_message
+from bot.services.llm import InvalidChatCompletion
 from bot.services.safety import (
     EMERGENCY_NUMBERS,
     SUPPORT_TEXT,
@@ -18,33 +21,45 @@ logger = logging.getLogger(__name__)
 router = Router(name="qa")
 
 
+async def ai_answer(runtime, user_id: int, question: str, records: Sequence[LegalRecord]) -> str | None:
+    if not runtime.settings.use_llm or runtime.chat_provider is None:
+        return None
+    try:
+        tokens, cost = await runtime.repository.usage_today()
+        if tokens >= runtime.settings.openai_daily_token_limit or cost >= runtime.settings.openai_daily_cost_limit_usd:
+            logger.warning("Daily LLM usage limit reached")
+            return None
+        try:
+            completion = await runtime.chat_provider.answer(mask_pii(question), records)
+        except InvalidChatCompletion as exc:
+            await runtime.repository.record_usage(user_id, exc.tokens, exc.cost_usd)
+            raise
+        await runtime.repository.record_usage(user_id, completion.tokens, completion.cost_usd)
+        return completion.text
+    except Exception:
+        logger.exception("LLM answer failed")
+        return None
+
+
+async def send_answer(message, text: str, record_id: int | None, *, show_details: bool = False) -> None:
+    chunks = split_message(text)
+    for chunk in chunks[:-1]:
+        await message.answer(chunk)
+    if chunks:
+        await message.answer(chunks[-1], reply_markup=rating_keyboard(record_id, show_details=show_details))
+
+
 async def deliver_record(
     message,
     runtime,
     record,
     user_id: int,
-    original_question: str | None = None,
-    context_records=None,
 ) -> None:
-    answer_text = record.answer
-    if runtime.chat_provider and runtime.settings.use_llm:
-        try:
-            tokens, cost = await runtime.repository.usage_today()
-            if tokens < runtime.settings.openai_daily_token_limit and cost < runtime.settings.openai_daily_cost_limit_usd:
-                completion = await runtime.chat_provider.answer(
-                    mask_pii(original_question or record.question),
-                    (context_records or [record])[:3],
-                )
-                answer_text = completion.text
-                await runtime.repository.record_usage(user_id, completion.tokens, completion.cost_usd)
-        except Exception:
-            logger.exception("LLM answer failed; returning dataset answer")
-    text = format_answer(answer_text, record, runtime.disclaimer)
-    chunks = split_message(text)
-    for chunk in chunks[:-1]:
-        await message.answer(chunk)
-    if chunks:
-        await message.answer(chunks[-1], reply_markup=rating_keyboard(record.id))
+    text = format_answer(record.answer, record, runtime.disclaimer)
+    await send_answer(
+        message, text, record.id,
+        show_details=runtime.settings.use_llm and runtime.chat_provider is not None,
+    )
 
 
 @router.message(F.text)
@@ -67,6 +82,24 @@ async def handle_question(message: Message, runtime) -> None:
     await message.bot.send_chat_action(message.chat.id, "typing")
     results = await runtime.search.search(safe_text, limit=runtime.settings.search_top_k)
     best = results[0] if results else None
+    relevant = [result.record for result in results if result.score >= runtime.settings.search_low_threshold][:3]
+    if relevant and runtime.settings.use_llm and runtime.chat_provider is not None:
+        answer = await ai_answer(runtime, message.from_user.id, safe_text, relevant)
+        if answer:
+            await runtime.repository.log_question(
+                message.from_user.id, safe_text, None, best.score, track_unanswered=False,
+            )
+            text = translations()["ai_context"] + "\n\n" + answer
+            sources = []
+            for record in relevant:
+                basis = "; ".join(record.legal_basis) or translations()["basis_not_specified"]
+                sources.append(f"• {record.question}\n  {translations()['basis_label']}: {basis}")
+            text += "\n\n" + translations()["context_sources"] + "\n" + "\n".join(sources)
+            if any(record.confidence == "check" for record in relevant):
+                text += "\n\n⚠️ Бап нөмірі мен мерзімді adilet.zan.kz сайтынан тексеріңіз."
+            await send_answer(message, format_answer(text, disclaimer=runtime.disclaimer), None)
+            return
+        await message.answer(translations()["ai_unavailable"])
     if best and best.score >= runtime.settings.search_high_threshold:
         await runtime.repository.log_question(message.from_user.id, safe_text, best.record.id, best.score)
         await deliver_record(
@@ -74,8 +107,6 @@ async def handle_question(message: Message, runtime) -> None:
             runtime,
             best.record,
             message.from_user.id,
-            safe_text,
-            [result.record for result in results[:3]],
         )
         return
     if best and best.score >= runtime.settings.search_low_threshold:
@@ -96,6 +127,22 @@ async def handle_question(message: Message, runtime) -> None:
         translations()["no_answer"] + f"\n\nℹ️ {runtime.disclaimer}",
         reply_markup=runtime.topic_menu(),
     )
+
+
+@router.callback_query(F.data.startswith("detail:"))
+async def explain_record(callback: CallbackQuery, runtime) -> None:
+    record_id = int(callback.data.split(":")[1])
+    record = runtime.records_by_id.get(record_id)
+    if record is None:
+        await callback.answer(translations()["detail_missing"], show_alert=True)
+        return
+    await callback.answer()
+    answer = await ai_answer(runtime, callback.from_user.id, record.question, [record])
+    if answer is None:
+        await callback.message.answer(translations()["ai_unavailable"])
+        return
+    text = translations()["ai_context"] + "\n\n" + answer
+    await send_answer(callback.message, format_answer(text, record, runtime.disclaimer), record.id)
 
 
 @router.callback_query(F.data.startswith("pick:"))

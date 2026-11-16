@@ -69,12 +69,15 @@ def matches_keyboard(results) -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(inline_keyboard=rows)
 
 
-def rating_keyboard(record_id: int | None) -> InlineKeyboardMarkup:
+def rating_keyboard(record_id: int | None, *, show_details: bool = False) -> InlineKeyboardMarkup:
     rid = record_id or 0
-    return InlineKeyboardMarkup(inline_keyboard=[
+    rows = [
         [
             InlineKeyboardButton(text="👍", callback_data=f"rate:1:{rid}"),
             InlineKeyboardButton(text="👎", callback_data=f"rate:0:{rid}"),
         ],
-        [menu_button()],
-    ])
+    ]
+    if show_details and record_id is not None:
+        rows.append([InlineKeyboardButton(text=translations()["more_details"], callback_data=f"detail:{record_id}")])
+    rows.append([menu_button()])
+    return InlineKeyboardMarkup(inline_keyboard=rows)
