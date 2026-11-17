@@ -17,6 +17,10 @@ _DANGER_TERMS = (
     "опасность жизни", "бьет", "бьёт", "избил", "избивает", "избивают",
     "изнасил", "домог", "угроз", "покончить", "не хочу жить", "хочу умереть",
     "вред себе", "порезать себя", "меня заставляют",
+    "hit me", "hits me", "beat me", "beating me", "violence", "blackmail",
+    "threaten", "threatens", "kill me", "kill myself", "suicide", "end my life",
+    "hurt myself", "self harm", "kidnap", "rape", "sexual assault", "stalking",
+    "domestic abuse", "in danger", "force me",
 )
 
 

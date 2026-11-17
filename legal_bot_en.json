@@ -1,0 +1,3037 @@
+{
+  "meta": {
+    "language": "en",
+    "description": "Legal literacy and safety: question-and-answer database for a Telegram bot",
+    "total": 222,
+    "topics": [
+      "Civil Law",
+      "Safety of Children and Teenagers",
+      "Banking, Payments and Financial Security",
+      "Right to Education",
+      "Healthcare",
+      "Healthcare and Medical Rights",
+      "Personal Data",
+      "Drugs, Alcohol and Tobacco",
+      "Labor Law",
+      "Protection of Personal Data",
+      "Road Traffic and Vehicle Safety",
+      "Legal Aid",
+      "Internet and Cybersecurity",
+      "Constitution",
+      "Constitution and Civil Rights",
+      "State Services and Documents",
+      "Family Law",
+      "Police and Personal Safety",
+      "Taxes",
+      "Court and Administrative Procedures",
+      "Phone and Online Fraud",
+      "Language Rights",
+      "Domestic Violence",
+      "Housing and Real Estate",
+      "Consumer Rights",
+      "Consumer Rights and Contracts",
+      "Emergencies",
+      "Urgent Situations",
+      "Security, Extremism and Terrorism",
+      "Criminal Procedure",
+      "Criminal Law",
+      "Basics of Legal Literacy",
+      "Administrative Law",
+      "Social Networks and Digital Ethics"
+    ],
+    "confidence_levels": {
+      "high": "legal basis indicated",
+      "check": "article number/deadline must be verified on adilet.zan.kz",
+      "general": "general information, no specific article indicated"
+    },
+    "bot_rules": [
+      "Answers should be short, clear and polite; explain complex terms in simple language.",
+      "The bot is not a lawyer: it provides general information and, in complex cases, recommends turning to specialists (a lawyer, the police, an advocate).",
+      "In case of danger (violence, blackmail, threat to life), it should first of all provide the emergency numbers (102, 103, 112).",
+      "It must never blame the victim; it should offer support and suggest concrete steps.",
+      "It must never ask the user for confidential information such as passwords, SMS codes or card details.",
+      "If a specific article of law is unknown in an answer, it should not guess but recommend turning to an official source (adilet.zan.kz)."
+    ],
+    "disclaimer": "Disclaimer: this document provides general information. Legislation may change, so before publishing the bot's content, it is recommended to verify it against the norms currently in force on adilet.zan.kz and with a lawyer."
+  },
+  "qa": [
+    {
+      "id": 1,
+      "source": "legal_qa_kz",
+      "source_id": 1,
+      "topic": "Constitution",
+      "question": "When was Kazakhstan's current Constitution adopted and when did it enter into force?",
+      "variants": [
+        "In what year did the new Constitution enter into force?",
+        "Is the 1995 Constitution still in effect?"
+      ],
+      "answer": "Kazakhstan's new Constitution was adopted at a republican referendum on 15 March 2026 and entered into force on 1 July 2026. The 1995 Constitution has ceased to be in effect.",
+      "legal_basis": [
+        "Constitution of the Republic of Kazakhstan (2026), Final and Transitional Provisions"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 2,
+      "source": "legal_qa_kz",
+      "source_id": 2,
+      "topic": "Constitution",
+      "question": "What sections does the Constitution consist of, and in which section are human rights set out?",
+      "variants": [
+        "How many articles does the Constitution have?",
+        "In which section of the Constitution are citizens' fundamental rights set out?"
+      ],
+      "answer": "The Constitution consists of 11 sections and 96 articles. The fundamental rights, freedoms and duties of the individual and citizen are collected in Section II (Articles 12–41).",
+      "legal_basis": [
+        "Constitution of the Republic of Kazakhstan (2026), Sections I–XI"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 3,
+      "source": "legal_qa_kz",
+      "source_id": 3,
+      "topic": "Constitution",
+      "question": "What is the state language of Kazakhstan?",
+      "variants": [
+        "Which language is the state language in Kazakhstan?",
+        "What does the Constitution say about the state language?"
+      ],
+      "answer": "Under the Constitution, the state language of the Republic of Kazakhstan is Kazakh. The procedure for the use of languages is regulated by laws, including the Law “On Languages in the Republic of Kazakhstan”.",
+      "legal_basis": [
+        "Constitution of the Republic of Kazakhstan (2026), Section I",
+        "Law “On Languages in the Republic of Kazakhstan”, 1997"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 4,
+      "source": "legal_qa_kz",
+      "source_id": 4,
+      "topic": "Constitution",
+      "question": "What is the Kurultai and how many deputies does it have?",
+      "variants": [
+        "What has Kazakhstan's Parliament become?",
+        "How is the Kurultai elected?"
+      ],
+      "answer": "The Kurultai is Kazakhstan's highest representative body, which exercises legislative power. It consists of 145 deputies and is elected under a proportional system from a single nationwide constituency.",
+      "legal_basis": [
+        "Constitution of the Republic of Kazakhstan (2026), Section IV (Articles 52–62)"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 5,
+      "source": "legal_qa_kz",
+      "source_id": 5,
+      "topic": "Constitution",
+      "question": "What is the People's Council of Kazakhstan?",
+      "variants": [
+        "What powers does the People's Council have?",
+        "Can the People's Council initiate a referendum?"
+      ],
+      "answer": "The People's Council of Kazakhstan is the highest consultative body representing the interests of the people. It develops proposals on domestic policy, can submit draft laws to the Kurultai, and can initiate a republican referendum.",
+      "legal_basis": [
+        "Constitution of the Republic of Kazakhstan (2026), Section VI (Articles 70–71)"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 6,
+      "source": "legal_qa_kz",
+      "source_id": 6,
+      "topic": "Constitution",
+      "question": "Does the Constitution protect a person's dignity and honor?",
+      "variants": [
+        "Which of my constitutional rights is violated if I am verbally abused and insulted?",
+        "Which article of the Constitution speaks of the inviolability of dignity?"
+      ],
+      "answer": "Yes. The new Constitution establishes not only a person's dignity but also their honor as an inviolable value (Article 20; in place of Article 17 of the former Constitution).",
+      "legal_basis": [
+        "Constitution of the Republic of Kazakhstan (2026), Article 20"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 7,
+      "source": "legal_qa_kz",
+      "source_id": 7,
+      "topic": "Constitution",
+      "question": "Does a law have retroactive effect?",
+      "variants": [
+        "Does a new law apply to acts committed earlier?",
+        "If a law worsens my situation, does it have retroactive effect?"
+      ],
+      "answer": "Laws that impose new obligations on citizens or worsen their situation have no retroactive effect. The general rule on the retroactive effect of laws is set out in the Constitution.",
+      "legal_basis": [
+        "Constitution of the Republic of Kazakhstan (2026), Section II"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 8,
+      "source": "legal_qa_kz",
+      "source_id": 8,
+      "topic": "Constitution",
+      "question": "Can I obtain compensation for harm caused by the unlawful actions of state bodies?",
+      "variants": [
+        "What should I do if an official acted unlawfully and caused me losses?",
+        "Do I have the right to compensation from the state for damage?"
+      ],
+      "answer": "Yes. The Constitution establishes everyone's right to have the state compensate harm caused by the unlawful actions of state bodies and officials. Such a claim is brought through the court.",
+      "legal_basis": [
+        "Constitution of the Republic of Kazakhstan (2026), Section II"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 9,
+      "source": "legal_qa_kz",
+      "source_id": 9,
+      "topic": "Constitution",
+      "question": "Are correspondence, telephone conversations and bank secrecy protected?",
+      "variants": [
+        "Can my telephone conversations be listened to?",
+        "Who may know information about my bank accounts?"
+      ],
+      "answer": "Yes. The law protects the secrecy of correspondence, telephone conversations, postal and other communications, including those transmitted by digital technologies, as well as the secrecy of banking operations, deposits and savings. This right may be restricted only in the cases and in the manner provided by law.",
+      "legal_basis": [
+        "Constitution of the Republic of Kazakhstan (2026), Section II"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 10,
+      "source": "legal_qa_kz",
+      "source_id": 10,
+      "topic": "Constitution",
+      "question": "Is dual citizenship permitted in Kazakhstan?",
+      "variants": [
+        "If I acquire the citizenship of another country, will I keep my Kazakhstani citizenship?",
+        "What does the Constitution say about dual citizenship?"
+      ],
+      "answer": "No. A citizen of Kazakhstan cannot hold dual or multiple citizenship; holding the citizenship of another country is grounds for termination of Kazakhstani citizenship. For minor children who acquired foreign citizenship by being born abroad, the rules established by law apply.",
+      "legal_basis": [
+        "Constitution of the Republic of Kazakhstan (2026), Section II",
+        "Law “On Citizenship of the Republic of Kazakhstan”"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 11,
+      "source": "legal_qa_kz",
+      "source_id": 11,
+      "topic": "Constitution",
+      "question": "Is the education system in our country secular?",
+      "variants": [
+        "Is religion taught in schools?",
+        "What does the Constitution say about education?"
+      ],
+      "answer": "Under the Constitution, the system of education and upbringing in educational organizations is secular, except for spiritual (religious) educational organizations.",
+      "legal_basis": [
+        "Constitution of the Republic of Kazakhstan (2026), Section II"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 12,
+      "source": "legal_qa_kz",
+      "source_id": 12,
+      "topic": "Constitution",
+      "question": "What is marriage under the Constitution?",
+      "variants": [
+        "How is marriage defined in the Constitution?",
+        "On what basis is a marriage entered into?"
+      ],
+      "answer": "Under the Constitution, marriage is a voluntary and equal union of a man and a woman, registered by the state in accordance with the law.",
+      "legal_basis": [
+        "Constitution of the Republic of Kazakhstan (2026), Section II",
+        "Code “On Marriage (Matrimony) and Family”, 2011"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 13,
+      "source": "legal_qa_kz",
+      "source_id": 13,
+      "topic": "Constitution",
+      "question": "Can I go to court if my rights are violated?",
+      "variants": [
+        "Is there a right to judicial protection?",
+        "What should I do if I disagree with a decision of a state body?"
+      ],
+      "answer": "Yes. Everyone has the right to defend their rights and freedoms in court. Decisions and actions of state bodies can be appealed to a court.",
+      "legal_basis": [
+        "Constitution of the Republic of Kazakhstan (2026), Section II"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 14,
+      "source": "legal_qa_kz",
+      "source_id": 14,
+      "topic": "Criminal Law",
+      "question": "At what age does criminal liability begin?",
+      "variants": [
+        "From what age is a person liable for a crime?",
+        "Can a 14-year-old be held criminally liable?"
+      ],
+      "answer": "As a general rule, criminal liability begins at the age of 16. For certain serious crimes (for example, murder), liability begins at 14 according to the list set out in the law.",
+      "legal_basis": [
+        "Criminal Code of the Republic of Kazakhstan, Article 15"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 15,
+      "source": "legal_qa_kz",
+      "source_id": 15,
+      "topic": "Criminal Procedure",
+      "question": "How long can a suspect be detained?",
+      "variants": [
+        "For how many hours can the police detain me?",
+        "What is the detention period?"
+      ],
+      "answer": "Under the Code of Criminal Procedure, a suspect's detention must not exceed 72 hours; during this time the question of arrest is decided by a court. Because a new Constitution has been adopted, it is advisable to check the current wording on adilet.zan.kz.",
+      "legal_basis": [
+        "Code of Criminal Procedure of the Republic of Kazakhstan, Article 128"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 16,
+      "source": "legal_qa_kz",
+      "source_id": 16,
+      "topic": "Criminal Procedure",
+      "question": "What are my rights if I am detained?",
+      "variants": [
+        "Can I call a lawyer if the police detain me?",
+        "Can I stay silent and not answer questions?"
+      ],
+      "answer": "A detained person or suspect has the right to know the reason for the detention, to receive the assistance of defense counsel (a lawyer), to refuse to testify until defense counsel arrives, and to refuse to testify against themselves. You can also demand that relatives be notified.",
+      "legal_basis": [
+        "Code of Criminal Procedure of the Republic of Kazakhstan, rights of a suspect (Article 64)"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 17,
+      "source": "legal_qa_kz",
+      "source_id": 17,
+      "topic": "Criminal Procedure",
+      "question": "What is the presumption of innocence?",
+      "variants": [
+        "Does being innocent need to be proven?",
+        "Is a person considered guilty before a court verdict?"
+      ],
+      "answer": "Under the presumption of innocence, a person is considered innocent until their guilt has been proven in the manner established by law and a court verdict has entered into legal force. The burden of proving guilt lies with the prosecution, and doubts are resolved in favor of the accused.",
+      "legal_basis": [
+        "Code of Criminal Procedure of the Republic of Kazakhstan, Article 19"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 18,
+      "source": "legal_qa_kz",
+      "source_id": 18,
+      "topic": "Criminal Law",
+      "question": "Under which article is liability for fraud imposed?",
+      "variants": [
+        "How is fraud defined?",
+        "Where do I file a complaint if someone has deceived me out of my money?"
+      ],
+      "answer": "Fraud is the appropriation of another person's property by deception or abuse of trust. Liability for it is imposed under Article 190 of the Criminal Code. If you have been a victim of fraud, immediately notify your bank, call 102, or file a report with the police.",
+      "legal_basis": [
+        "Criminal Code of the Republic of Kazakhstan, Article 190"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 19,
+      "source": "legal_qa_kz",
+      "source_id": 19,
+      "topic": "Criminal Law",
+      "question": "What liability is there for giving and taking a bribe?",
+      "variants": [
+        "What happens if I offer money to an official?",
+        "Under which article is liability for taking a bribe imposed?"
+      ],
+      "answer": "Taking a bribe is covered by Article 366 of the Criminal Code, and giving a bribe by Article 367. Both are crimes. Information about corruption can be reported to the Anti-Corruption Agency.",
+      "legal_basis": [
+        "Criminal Code of the Republic of Kazakhstan, Articles 366, 367",
+        "Law “On Combating Corruption”, 2015"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 20,
+      "source": "legal_qa_kz",
+      "source_id": 20,
+      "topic": "Criminal Law",
+      "question": "What is the difference between defamation and insult?",
+      "variants": [
+        "What happens if I spread false information about someone?",
+        "Am I liable if I insult someone on the internet?"
+      ],
+      "answer": "Defamation (Article 130) is the dissemination of knowingly false information that harms a person's honor and reputation. Insult (Article 131) is the humiliation of a person's dignity in an indecent form (orally, in writing, on the internet). Liability is provided for both.",
+      "legal_basis": [
+        "Criminal Code of the Republic of Kazakhstan, Articles 130, 131"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 21,
+      "source": "legal_qa_kz",
+      "source_id": 21,
+      "topic": "Criminal Law",
+      "question": "Where can a crime be reported?",
+      "variants": [
+        "What should I do if there has been a theft?",
+        "How do I file a report with the police?"
+      ],
+      "answer": "A crime can be reported by calling 102 (police) or 112 (the unified rescue service), and also by submitting a written or oral report to the internal affairs bodies or the prosecutor's office. When filing a report, insist on receiving a registration document (coupon).",
+      "legal_basis": [
+        "Code of Criminal Procedure of the Republic of Kazakhstan, procedure for receiving and registering reports of crimes"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 22,
+      "source": "legal_qa_kz",
+      "source_id": 22,
+      "topic": "Administrative Law",
+      "question": "What is the difference between an administrative offense and a crime?",
+      "variants": [
+        "What is administrative liability?",
+        "If I am fined, is that considered a crime?"
+      ],
+      "answer": "A crime is an act with a high degree of danger to society; it is punished under the Criminal Code and may result in a criminal record. An administrative offense is an act with a lower degree of danger to society; under the Code of Administrative Offenses it mainly results in measures such as a fine or administrative arrest.",
+      "legal_basis": [
+        "Code of the Republic of Kazakhstan on Administrative Offenses, 2014",
+        "Criminal Code of the Republic of Kazakhstan, 2014"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 23,
+      "source": "legal_qa_kz",
+      "source_id": 23,
+      "topic": "Administrative Law",
+      "question": "What is the MCI and what is its amount in 2026?",
+      "variants": [
+        "How much is the monthly calculation index?",
+        "How many tenge is the MCI in 2026?"
+      ],
+      "answer": "The MCI (monthly calculation index; AEK in Kazakh, MRP in Russian) is an indicator used to calculate fines, taxes and benefits. In 2026 it is 4,325 tenge.",
+      "legal_basis": [
+        "Law on the Republican Budget for 2026–2028",
+        "Tax Code of the Republic of Kazakhstan (2026)"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 24,
+      "source": "legal_qa_kz",
+      "source_id": 24,
+      "topic": "Administrative Law",
+      "question": "Can a fine be paid at a discount?",
+      "variants": [
+        "Can I pay just 50 percent of the fine?",
+        "Within how many days is it best to pay the fine?"
+      ],
+      "answer": "If an administrative fine is paid voluntarily within the short period specified by law (usually within seven days from the date of the decision), the amount may be calculated with a 50 percent discount. Check the conditions for applying the discount in the code for your specific situation.",
+      "legal_basis": [
+        "Code of the Republic of Kazakhstan on Administrative Offenses, procedure for paying fines"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 25,
+      "source": "legal_qa_kz",
+      "source_id": 25,
+      "topic": "Administrative Law",
+      "question": "What should I do if I disagree with a ruling imposing an administrative fine?",
+      "variants": [
+        "Can I appeal a fine?",
+        "How do I appeal a traffic police ruling?"
+      ],
+      "answer": "You can file an appeal with a higher body or a court within the short period established by law (usually ten days). If an appeal is filed, enforcement of the ruling may be suspended. Compare the exact deadline with the information stated in the ruling.",
+      "legal_basis": [
+        "Code of the Republic of Kazakhstan on Administrative Offenses, procedure for filing an appeal"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 26,
+      "source": "legal_qa_kz",
+      "source_id": 26,
+      "topic": "Civil Law",
+      "question": "From what age is a person fully legally capable?",
+      "variants": [
+        "What is the age of majority?",
+        "Can a 14-year-old enter into transactions?"
+      ],
+      "answer": "Civil legal capacity arises in full from the age of 18. Teenagers aged 14 to 18 are partially legally capable: they can enter into some transactions with the consent of their legal representatives.",
+      "legal_basis": [
+        "Civil Code of the Republic of Kazakhstan (General Part), Articles 17, 23"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 27,
+      "source": "legal_qa_kz",
+      "source_id": 27,
+      "topic": "Civil Law",
+      "question": "What is the limitation period for bringing a claim?",
+      "variants": [
+        "Within what period can I go to court to recover a debt?",
+        "What is a statute of limitations?"
+      ],
+      "answer": "The general limitation period for bringing a claim is three years. The law also provides other periods for certain claims. The period is counted from the day the person learned or should have learned that their right was violated.",
+      "legal_basis": [
+        "Civil Code of the Republic of Kazakhstan (General Part), Article 178"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 28,
+      "source": "legal_qa_kz",
+      "source_id": 28,
+      "topic": "Civil Law",
+      "question": "Is a written agreement needed when lending money?",
+      "variants": [
+        "How should a loan be formalized?",
+        "Do I need to write a receipt for a loan I received?"
+      ],
+      "answer": "If a transaction between citizens exceeds a certain amount (above the amount in MCI established by law), it must be made in writing. A written receipt or agreement can be used as evidence in court if a dispute arises. Check the current amount of this threshold in the Civil Code.",
+      "legal_basis": [
+        "Civil Code of the Republic of Kazakhstan (General Part), Article 152"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 29,
+      "source": "legal_qa_kz",
+      "source_id": 29,
+      "topic": "Civil Law",
+      "question": "How much time is given to accept an inheritance?",
+      "variants": [
+        "Within how many months must I act to claim an inheritance?",
+        "How does one enter into an inheritance?"
+      ],
+      "answer": "As a rule, six months from the date the inheritance opens are given to accept it. Within this period the heir must apply to a notary or prove that they have actually taken possession of the inheritance. Since an extension may be possible depending on the circumstances, consulting a notary is recommended.",
+      "legal_basis": [
+        "Civil Code of the Republic of Kazakhstan (Special Part), chapter on inheritance (Article 1072)"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 30,
+      "source": "legal_qa_kz",
+      "source_id": 30,
+      "topic": "Civil Law",
+      "question": "Where do I need to register rights to real estate?",
+      "variants": [
+        "If I buy an apartment, where is the ownership right registered?",
+        "How do I register rights to real estate?"
+      ],
+      "answer": "Rights to real estate are subject to state registration. Registration can be carried out through the “Government for Citizens” State Corporation (PSC) or through the eGov portal.",
+      "legal_basis": [
+        "Law “On State Registration of Rights to Immovable Property”, 2007"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 31,
+      "source": "legal_qa_kz",
+      "source_id": 31,
+      "topic": "Family Law",
+      "question": "What is the minimum age for marriage?",
+      "variants": [
+        "From what age can one get married?",
+        "Can I marry before turning 18?"
+      ],
+      "answer": "The marriage age in Kazakhstan is 18. Certain exceptions may be regulated by law, so check the current wording for your specific situation.",
+      "legal_basis": [
+        "Code “On Marriage (Matrimony) and Family”, Article 10"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 32,
+      "source": "legal_qa_kz",
+      "source_id": 32,
+      "topic": "Family Law",
+      "question": "How can a marriage be dissolved?",
+      "variants": [
+        "Where is a divorce carried out?",
+        "Do I need to go to court to get a divorce?"
+      ],
+      "answer": "If the spouses have no joint minor children and both agree, the marriage is dissolved by the civil registry (ZAGS) bodies. If there is a minor child or one of the spouses does not agree, the marriage is dissolved in court.",
+      "legal_basis": [
+        "Code “On Marriage (Matrimony) and Family”, chapter on dissolution of marriage"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 33,
+      "source": "legal_qa_kz",
+      "source_id": 33,
+      "topic": "Family Law",
+      "question": "How much is child support?",
+      "variants": [
+        "How much is child support for one child?",
+        "What share of income does child support make up?"
+      ],
+      "answer": "Child support for minor children is the following share of earnings and other income: for one child – 1/4, for two children – 1/3, for three or more children – 1/2. By agreement of the parties or by court decision, the amount may be set differently.",
+      "legal_basis": [
+        "Code “On Marriage (Matrimony) and Family”, Article 139"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 34,
+      "source": "legal_qa_kz",
+      "source_id": 34,
+      "topic": "Family Law",
+      "question": "What should I do if child support is not paid?",
+      "variants": [
+        "What measures are applied to a person who evades paying child support?",
+        "How can I recover child support arrears?"
+      ],
+      "answer": "On the basis of a court decision or a notarial agreement, the document can be submitted to a bailiff for recovery. The bailiff applies recovery measures against the debtor's property and income and imposes restrictions on the debtor.",
+      "legal_basis": [
+        "Law “On Enforcement Proceedings and the Status of Bailiffs”, 2010"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 35,
+      "source": "legal_qa_kz",
+      "source_id": 35,
+      "topic": "Family Law",
+      "question": "Who owns property acquired during marriage?",
+      "variants": [
+        "How is property divided on divorce?",
+        "What is the spouses' joint property?"
+      ],
+      "answer": "Unless the law provides otherwise, property acquired during marriage from work and other income is the spouses' common joint property. On divorce, property is divided by agreement of the parties or through the court; property received as a gift or by inheritance usually remains personal property.",
+      "legal_basis": [
+        "Code “On Marriage (Matrimony) and Family”, chapter on spouses' property"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 36,
+      "source": "legal_qa_kz",
+      "source_id": 36,
+      "topic": "Labor Law",
+      "question": "How should an employment contract be concluded?",
+      "variants": [
+        "Is it mandatory to conclude a contract when starting a job?",
+        "What is an electronic employment contract?"
+      ],
+      "answer": "An employment contract is concluded in writing and signed by the parties, with each party keeping one copy. From 2026, employment contracts must be registered electronically in the unified system for recording employment contracts (hr.enbek.kz); check the specific requirements for the employer in the current wording.",
+      "legal_basis": [
+        "Labor Code of the Republic of Kazakhstan, 2015, chapter on the employment contract"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 37,
+      "source": "legal_qa_kz",
+      "source_id": 37,
+      "topic": "Labor Law",
+      "question": "Can an employer conclude a civil-law contract with me instead of an employment contract?",
+      "variants": [
+        "Can I be formalized under a civil-law (GPH) contract?",
+        "Is a civil contract with features of an employment contract lawful?"
+      ],
+      "answer": "From 8 June 2026, it is prohibited for an employer to conclude with an individual a civil-law contract that has at least one distinguishing feature of an employment contract. This is a new paragraph 1-1 added to Article 26 of the Labor Code.",
+      "legal_basis": [
+        "Labor Code of the Republic of Kazakhstan, paragraph 1-1 of Article 26",
+        "Law of the Republic of Kazakhstan dated 7 April 2026, No. 277-VIII"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 38,
+      "source": "legal_qa_kz",
+      "source_id": 38,
+      "topic": "Labor Law",
+      "question": "How long can a probationary period be?",
+      "variants": [
+        "How many months is the probationary period when starting a job?",
+        "Can I be dismissed during the probationary period?"
+      ],
+      "answer": "The probationary period must not exceed three months and must be stated in the employment contract. During the probationary period, the guarantees of the Labor Code also apply to the employee.",
+      "legal_basis": [
+        "Labor Code of the Republic of Kazakhstan, Article 36"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 39,
+      "source": "legal_qa_kz",
+      "source_id": 39,
+      "topic": "Labor Law",
+      "question": "How many days is annual leave?",
+      "variants": [
+        "How many calendar days of leave are granted?",
+        "What is the duration of annual paid leave?"
+      ],
+      "answer": "The minimum duration of annual paid leave is 24 calendar days. Longer leave may be granted to certain categories (for example, minors, persons with disabilities, and those working in special conditions).",
+      "legal_basis": [
+        "Labor Code of the Republic of Kazakhstan, Article 88"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 40,
+      "source": "legal_qa_kz",
+      "source_id": 40,
+      "topic": "Labor Law",
+      "question": "How many hours a week can I work?",
+      "variants": [
+        "What is normal working time?",
+        "How is the length of working time set in law?"
+      ],
+      "answer": "Normal working time does not exceed 40 hours per week. For certain categories (for example, minors) and for those working in harmful conditions, working time may be shortened.",
+      "legal_basis": [
+        "Labor Code of the Republic of Kazakhstan, chapter on working time"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 41,
+      "source": "legal_qa_kz",
+      "source_id": 41,
+      "topic": "Labor Law",
+      "question": "What must an employee do to resign of their own accord?",
+      "variants": [
+        "How far in advance must I give notice to quit?",
+        "What is the procedure for leaving a job at my own request?"
+      ],
+      "answer": "An employee must notify the employer of termination of the employment contract in writing, usually one month in advance. If the parties agree, the contract may be terminated early by agreement.",
+      "legal_basis": [
+        "Labor Code of the Republic of Kazakhstan, Article 56"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 42,
+      "source": "legal_qa_kz",
+      "source_id": 42,
+      "topic": "Labor Law",
+      "question": "What are an employee's rights in a staff reduction?",
+      "variants": [
+        "Must my employer give me advance notice if I am made redundant?",
+        "Is there a benefit payable on redundancy?"
+      ],
+      "answer": "In a reduction of staff or number of employees, the employer must give the employee advance written notice (usually one month) and ensure the compensation and guarantees provided by law. If the reduction is carried out without advance notice or in violation of the procedure, you can go to court.",
+      "legal_basis": [
+        "Labor Code of the Republic of Kazakhstan, Article 52"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 43,
+      "source": "legal_qa_kz",
+      "source_id": 43,
+      "topic": "Labor Law",
+      "question": "What should I do if wages are not paid on time?",
+      "variants": [
+        "My employer delayed my wages; where do I complain?",
+        "How can I recover unpaid wages?"
+      ],
+      "answer": "You can first submit a written application to the employer. If there is no result, you have the right to complain to the labor inspectorate and to apply to court over the labor dispute. As to time limits relating to wage arrears, it is advisable to take into account the normative resolutions of the Constitutional Court of 2026.",
+      "legal_basis": [
+        "Labor Code of the Republic of Kazakhstan, chapters on payment of wages and resolution of labor disputes",
+        "Normative resolutions of the Constitutional Court of the Republic of Kazakhstan, 2026"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 44,
+      "source": "legal_qa_kz",
+      "source_id": 44,
+      "topic": "Labor Law",
+      "question": "What are my rights if my dignity is insulted at work?",
+      "variants": [
+        "Is an employer allowed to interfere in my private life?",
+        "Are there new rules on protecting an employee's honor?"
+      ],
+      "answer": "The Law of 3 June 2026 introduced into the Labor Code provisions on protecting an employee's honor, dignity and the inviolability of private life; they entered into force on 4 August 2026. If your rights are violated, you can apply to the labor inspectorate or to court.",
+      "legal_basis": [
+        "Law of the Republic of Kazakhstan dated 3 June 2026, No. 295-VIII",
+        "Labor Code of the Republic of Kazakhstan"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 45,
+      "source": "legal_qa_kz",
+      "source_id": 45,
+      "topic": "Labor Law",
+      "question": "How long is pregnancy and maternity leave?",
+      "variants": [
+        "How many days is maternity leave?",
+        "How many days of leave can I take before and after childbirth?"
+      ],
+      "answer": "Under the Labor Code, pregnancy and maternity leave is 126 calendar days (70 before childbirth and 56 after). In the case of complicated childbirth or the birth of two or more children, the post-natal leave is longer. Payments are made under the Social Code.",
+      "legal_basis": [
+        "Labor Code of the Republic of Kazakhstan, Article 99",
+        "Social Code of the Republic of Kazakhstan, 2023"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 46,
+      "source": "legal_qa_kz",
+      "source_id": 46,
+      "topic": "Labor Law",
+      "question": "Is an employer obliged to send an employee for screening?",
+      "variants": [
+        "Is paid leave given for undergoing screening?",
+        "What new rights were introduced into the Labor Code in 2026?"
+      ],
+      "answer": "Under the amendments made to the Labor Code in 2026, employers are obliged to send employees for preventive medical screening, and in connection with this the employee is given time off work. Check the specific conditions and age-related requirements in the current wording on adilet.zan.kz.",
+      "legal_basis": [
+        "Labor Code of the Republic of Kazakhstan, 2026 amendments"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 47,
+      "source": "legal_qa_kz",
+      "source_id": 47,
+      "topic": "Taxes",
+      "question": "When did the new Tax Code enter into force?",
+      "variants": [
+        "Did tax legislation change in 2026?",
+        "What are the main changes in the new Tax Code?"
+      ],
+      "answer": "Kazakhstan's new Tax Code took effect on 1 January 2026. The main changes: the VAT rate was raised from 12% to 16%, the VAT registration threshold was lowered, a progressive scale for personal income tax was introduced, and regimes for the self-employed were regulated.",
+      "legal_basis": [
+        "Tax Code of the Republic of Kazakhstan (from 1 January 2026)"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 48,
+      "source": "legal_qa_kz",
+      "source_id": 48,
+      "topic": "Taxes",
+      "question": "What is the VAT rate in 2026?",
+      "variants": [
+        "What is the rate of value added tax?",
+        "What is the VAT registration threshold?"
+      ],
+      "answer": "From 2026, the base VAT rate is 16%. The threshold for mandatory VAT registration has been lowered to 10,000 MCI, which in 2026 equals approximately 43.25 million tenge of annual turnover.",
+      "legal_basis": [
+        "Tax Code of the Republic of Kazakhstan (2026)"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 49,
+      "source": "legal_qa_kz",
+      "source_id": 49,
+      "topic": "Taxes",
+      "question": "What is the personal income tax rate?",
+      "variants": [
+        "What percentage is personal income tax?",
+        "How does the progressive personal income tax scale work?"
+      ],
+      "answer": "Income of up to 8,500 MCI per year is taxed at the same rate of 10% as before (in 2026 this is approximately 36.8 million tenge). A higher rate provided for in the Tax Code applies to income above this threshold (progressive scale).",
+      "legal_basis": [
+        "Tax Code of the Republic of Kazakhstan (2026), personal income tax"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 50,
+      "source": "legal_qa_kz",
+      "source_id": 50,
+      "topic": "Taxes",
+      "question": "What is the monthly income limit for the self-employed?",
+      "variants": [
+        "How much can a self-employed person earn per month?",
+        "How do individual entrepreneurs operate after the new code?"
+      ],
+      "answer": "Under the regime for the self-employed, the monthly income limit is 300 MCI, which in 2026 is approximately 1.3 million tenge. If the limit is exceeded, it is necessary to switch to another tax regime.",
+      "legal_basis": [
+        "Tax Code of the Republic of Kazakhstan (2026)"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 51,
+      "source": "legal_qa_kz",
+      "source_id": 51,
+      "topic": "Consumer Rights",
+      "question": "Can I return a good-quality item to the store?",
+      "variants": [
+        "Can I return something I bought if I don't like it?",
+        "What is the period for exchanging goods?"
+      ],
+      "answer": "A consumer has the right, within fourteen days after the purchase, to exchange a good-quality non-food item that they do not like for a similar item or to get their money back, provided that it has not been used and its presentation and consumer properties are preserved. The law contains a list of goods that cannot be returned.",
+      "legal_basis": [
+        "Law “On Protection of Consumer Rights”, 2010, Article 25"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 52,
+      "source": "legal_qa_kz",
+      "source_id": 52,
+      "topic": "Consumer Rights",
+      "question": "What should I do if the item I bought turns out to be defective?",
+      "variants": [
+        "What claims can I make if an item breaks during the warranty period?",
+        "Will I get my money back for a poor-quality item?"
+      ],
+      "answer": "If a poor-quality item has been sold, the consumer may, at their choice, demand replacement of the item, free repair, a price reduction, or termination of the contract and a refund of the money paid. Submit your claim to the seller in writing and keep the receipt and warranty card.",
+      "legal_basis": [
+        "Law “On Protection of Consumer Rights”, 2010"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 53,
+      "source": "legal_qa_kz",
+      "source_id": 53,
+      "topic": "Consumer Rights",
+      "question": "Where can I complain if consumer rights are violated?",
+      "variants": [
+        "Where do I turn if the seller does not satisfy my claim?",
+        "What does the consumer rights protection department do?"
+      ],
+      "answer": "First submit a written claim to the seller (service provider). If there is no result, you can complain to the territorial department of the authorized body in the field of consumer rights protection or file a lawsuit in court. Under the law, consumers can file statements of claim without paying state duty.",
+      "legal_basis": [
+        "Law “On Protection of Consumer Rights”, 2010",
+        "Civil Procedure Code of the Republic of Kazakhstan"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 54,
+      "source": "legal_qa_kz",
+      "source_id": 54,
+      "topic": "Personal Data",
+      "question": "Can my personal data be collected without permission?",
+      "variants": [
+        "Can my personal information be given to other people?",
+        "What does the personal data law say?"
+      ],
+      "answer": "Under the law, the collection, processing and transfer of personal data is usually carried out only with the consent of the data subject; cases provided for by law are separate. The data subject has the right to know about data concerning them, to correct it, and, in cases provided by law, to demand its deletion.",
+      "legal_basis": [
+        "Law “On Personal Data and Their Protection”, 2013"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 55,
+      "source": "legal_qa_kz",
+      "source_id": 55,
+      "topic": "Personal Data",
+      "question": "Can I give my bank card or account to another person?",
+      "variants": [
+        "What happens if I give my card at an acquaintance's request?",
+        "Who is a “dropper”?"
+      ],
+      "answer": "Giving a bank card, account or SMS codes to a third party is extremely dangerous: if fraud or illegal movement of money is carried out through the account, the account holder may be held administratively or criminally liable. Do not tell anyone your card details or SMS code.",
+      "legal_basis": [
+        "Criminal Code of the Republic of Kazakhstan, articles on fraud and illegal financial operations",
+        "Code of the Republic of Kazakhstan on Administrative Offenses"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 56,
+      "source": "legal_qa_kz",
+      "source_id": 56,
+      "topic": "Legal Aid",
+      "question": "Who can receive free legal aid?",
+      "variants": [
+        "What should I do if I can't afford a lawyer?",
+        "What is state-guaranteed legal aid?"
+      ],
+      "answer": "State-guaranteed legal aid may be received by citizens in the categories specified in the law (for example, benefit recipients, single parents, persons with disabilities, children, and others). If you need defense counsel in a criminal case and do not have one, the investigator or the court will appoint one. Contact a legal consultation office or a bar association.",
+      "legal_basis": [
+        "Law “On Advocacy and Legal Aid”, 2018"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 57,
+      "source": "legal_qa_kz",
+      "source_id": 57,
+      "topic": "Healthcare",
+      "question": "What is the guaranteed volume of free medical care?",
+      "variants": [
+        "What care is free at the polyclinic?",
+        "What is OSMS?"
+      ],
+      "answer": "The guaranteed volume of free medical care is the list of medical services paid for by the state from the budget (emergency care, some diagnostics, inpatient care, etc.). Persons insured under the mandatory social health insurance (MSHI/OSMS) system receive expanded care.",
+      "legal_basis": [
+        "Code “On Public Health and the Healthcare System”, 2020"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 58,
+      "source": "legal_qa_kz",
+      "source_id": 58,
+      "topic": "Language Rights",
+      "question": "In what language can I apply to a state body?",
+      "variants": [
+        "If I apply in Russian, will it be accepted?",
+        "In what language do state bodies respond?"
+      ],
+      "answer": "Citizens may apply to state bodies in the language of their choice and have the right to receive a reply in that language; official record-keeping in state bodies is conducted in the state language, and Russian is also used where necessary. Check the specific rules in the language legislation.",
+      "legal_basis": [
+        "Constitution of the Republic of Kazakhstan (2026), provision on language",
+        "Law “On Languages in the Republic of Kazakhstan”, 1997"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 59,
+      "source": "legal_qa_kz",
+      "source_id": 59,
+      "topic": "Emergencies",
+      "question": "What are the emergency service numbers in Kazakhstan?",
+      "variants": [
+        "What number should I call for the police?",
+        "What is the ambulance number?"
+      ],
+      "answer": "The main numbers: 101 – fire service, 102 – police, 103 – emergency medical care, 112 – unified rescue service (works in all cases), 111 – children's helpline.",
+      "legal_basis": [
+        "Emergency service call numbers in Kazakhstan (official data)"
+      ],
+      "confidence": "high",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 60,
+      "source": "legal_qa_kz",
+      "source_id": 60,
+      "topic": "Domestic Violence",
+      "question": "What should I do if I am subjected to domestic violence?",
+      "variants": [
+        "Where can I turn if my husband beats me?",
+        "What is a protection order?"
+      ],
+      "answer": "If there is a threat of danger, call 102 or 112 immediately. The police have the right to issue a protection order against the offender, remove them, and refer the victim to organizations that provide support (crisis centers). If your health has been harmed, undergo a medical examination and file a report.",
+      "legal_basis": [
+        "Law “On the Prevention of Domestic Violence”, 2009",
+        "Criminal Code of the Republic of Kazakhstan, Code of the Republic of Kazakhstan on Administrative Offenses"
+      ],
+      "confidence": "check",
+      "as_of": "2026-11"
+    },
+    {
+      "id": 61,
+      "source": "bot_qa",
+      "source_id": 1,
+      "topic": "Basics of Legal Literacy",
+      "question": "What is legal literacy?",
+      "variants": [],
+      "answer": "Legal literacy is knowing your rights and duties, being able to defend them lawfully, and not breaking the law. It helps you protect yourself in everyday life from fraudsters, violence and mistakes.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 62,
+      "source": "bot_qa",
+      "source_id": 2,
+      "topic": "Basics of Legal Literacy",
+      "question": "At what age does a person gain full legal capacity?",
+      "variants": [],
+      "answer": "In Kazakhstan, full legal capacity begins at 18. Before that, most of a teenager's transactions are confirmed by their parents or legal representatives.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 63,
+      "source": "bot_qa",
+      "source_id": 4,
+      "topic": "Basics of Legal Literacy",
+      "question": "At what age does administrative liability begin?",
+      "variants": [],
+      "answer": "Liability for an administrative offense begins at 16. For unlawful acts by persons under 16, their parents are usually responsible.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 64,
+      "source": "bot_qa",
+      "source_id": 5,
+      "topic": "Basics of Legal Literacy",
+      "question": "Does ignorance of the law excuse you from liability?",
+      "variants": [],
+      "answer": "No. The argument “I didn't know” does not release you from liability, so it is important to know the basics of the law.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 65,
+      "source": "bot_qa",
+      "source_id": 6,
+      "topic": "Basics of Legal Literacy",
+      "question": "Where can I turn if my rights are violated?",
+      "variants": [],
+      "answer": "Depending on the situation: the police (102), the prosecutor's office, the court, the relevant state body, or a lawyer. Submit a written report of the offense and keep the document confirming it was accepted (coupon, letter).",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 66,
+      "source": "bot_qa",
+      "source_id": 7,
+      "topic": "Basics of Legal Literacy",
+      "question": "How can I get free legal aid?",
+      "variants": [],
+      "answer": "In cases provided by law, the state provides guaranteed legal aid. You can find out about this from the justice authorities, the legal consultation office of a bar association, or legal aid centers. The conditions for receiving aid depend on your situation.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 67,
+      "source": "bot_qa",
+      "source_id": 8,
+      "topic": "Police and Personal Safety",
+      "question": "How should I act if a police officer stops me?",
+      "variants": [],
+      "answer": "Stay calm, keep your hands visible, and make no sudden movements. Ask the officer to introduce themselves, show their official ID, and state the reason for the stop. Do not respond to rude behavior with rudeness.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 68,
+      "source": "bot_qa",
+      "source_id": 9,
+      "topic": "Police and Personal Safety",
+      "question": "Can the police check my documents?",
+      "variants": [],
+      "answer": "Yes, if there is a lawful basis. You can show your identity document either on paper or in digital form in the eGov mobile app. You have the right to ask the reason the document is required.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 69,
+      "source": "bot_qa",
+      "source_id": 10,
+      "topic": "Police and Personal Safety",
+      "question": "What are my rights if I am detained?",
+      "variants": [],
+      "answer": "You have the right to know the reason for the detention, to call a lawyer, to notify your relatives, and to refuse to testify against yourself. Without a court's sanction, the detention must not exceed 72 hours. Until your lawyer arrives, you can politely decline to give an explanation.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 70,
+      "source": "bot_qa",
+      "source_id": 11,
+      "topic": "Police and Personal Safety",
+      "question": "Do I have to sign the record?",
+      "variants": [],
+      "answer": "You must not sign without reading its content in full. If you disagree, write “I disagree” in the record, state the reason, and demand a copy.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 71,
+      "source": "bot_qa",
+      "source_id": 12,
+      "topic": "Police and Personal Safety",
+      "question": "If someone introduces themselves as a police officer, how do I check that they are genuine?",
+      "variants": [],
+      "answer": "Ask to see their official ID, and write down their name, position and unit. If in doubt, call 102 and verify the officer's authenticity. Fraudsters often use fake IDs and pressure.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 72,
+      "source": "bot_qa",
+      "source_id": 13,
+      "topic": "Police and Personal Safety",
+      "question": "Can the police enter my home unlawfully?",
+      "variants": [],
+      "answer": "Entering a dwelling and searching it usually require a lawful basis and the appropriate sanction (a decision of a court or prosecutor). In urgent cases the law provides a special procedure. Ask for the grounds for entry and demand that they show their documents.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 73,
+      "source": "bot_qa",
+      "source_id": 14,
+      "topic": "Internet and Cybersecurity",
+      "question": "How do I create a strong password?",
+      "variants": [],
+      "answer": "Use at least 12 characters: mix letters, numbers and symbols. Do not use easily guessed words such as a birthday, a name, or “123456”. Use a separate password for each account and turn on two-factor authentication.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 74,
+      "source": "bot_qa",
+      "source_id": 15,
+      "topic": "Internet and Cybersecurity",
+      "question": "What is phishing and how do I protect myself from it?",
+      "variants": [],
+      "answer": "Phishing is the theft of logins, passwords and card details through fake websites or links. Do not follow unknown links, check the website address carefully, use only official apps, and do not enter data into fake forms.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 75,
+      "source": "bot_qa",
+      "source_id": 16,
+      "topic": "Internet and Cybersecurity",
+      "question": "What data must never be shared with anyone?",
+      "variants": [],
+      "answer": "Do not tell anyone SMS codes, the CVV/CVC code of a bank card, passwords, PIN codes, or login details for the eGov or bank app – not even those who claim to be a “bank employee”.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 76,
+      "source": "bot_qa",
+      "source_id": 17,
+      "topic": "Internet and Cybersecurity",
+      "question": "Can I publish someone's photo or personal data without permission?",
+      "variants": [],
+      "answer": "No. If you disseminate a person's photo, private correspondence, address or other personal data without their consent, you may incur liability for interference with private life.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 77,
+      "source": "bot_qa",
+      "source_id": 18,
+      "topic": "Internet and Cybersecurity",
+      "question": "Is there liability for insulting, threatening or defaming someone on the internet?",
+      "variants": [],
+      "answer": "Yes. Online insults, threats and defamation can lead to liability provided by law. Records and screenshots are used as evidence.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 78,
+      "source": "bot_qa",
+      "source_id": 19,
+      "topic": "Internet and Cybersecurity",
+      "question": "What should I do if someone blackmails me online (for example, with personal photos)?",
+      "variants": [],
+      "answer": "Do not transfer money or comply with the demands. Save the correspondence, the profile link and screenshots. Block the blackmailer and report to the police (102). In this situation the blame lies not with you but with the blackmailer.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 79,
+      "source": "bot_qa",
+      "source_id": 20,
+      "topic": "Internet and Cybersecurity",
+      "question": "How do I stay safe when shopping online?",
+      "variants": [],
+      "answer": "Choose only trusted platforms and sellers, and check reviews and ratings. Beware of being pushed into full prepayment, unknown links, and prices that are too low. When paying, use only the official payment page.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 80,
+      "source": "bot_qa",
+      "source_id": 21,
+      "topic": "Internet and Cybersecurity",
+      "question": "What dangers are there on Telegram?",
+      "variants": [],
+      "answer": "Fake channels and bots, “easy money” offers, unknown files and links, and fake accounts. Not sending personal data to strangers, checking privacy settings and reporting suspicious accounts (Report) increase your safety.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 81,
+      "source": "bot_qa",
+      "source_id": 22,
+      "topic": "Phone and Online Fraud",
+      "question": "What should I do if someone calls “from the bank” and asks for a code?",
+      "variants": [],
+      "answer": "Stop immediately. A bank employee never asks for an SMS code, CVV or password. End the conversation and call the number on the back of your card or in the official app yourself.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 82,
+      "source": "bot_qa",
+      "source_id": 23,
+      "topic": "Phone and Online Fraud",
+      "question": "What if the “police” or “security service” demands that I move money to a “safe account”?",
+      "variants": [],
+      "answer": "This is a scam scheme. A state body never demands that you transfer money to a “safe account”. End the call, do not transfer any money, and report it to 102 or your bank.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 83,
+      "source": "bot_qa",
+      "source_id": 24,
+      "topic": "Phone and Online Fraud",
+      "question": "How do I protect myself from a call saying “Your relative is in trouble, money is needed”?",
+      "variants": [],
+      "answer": "Urgency and fear are the fraudsters' tools. Hang up, call your relative directly yourself, and check the situation. Do not transfer money without verifying for certain.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 84,
+      "source": "bot_qa",
+      "source_id": 25,
+      "topic": "Phone and Online Fraud",
+      "question": "Can I trust “easy money” or investment advertising?",
+      "variants": [],
+      "answer": "Offers promising guaranteed high returns are most often fraud. Check the organization's license, real address and reviews. Before investing money, consult people close to you.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 85,
+      "source": "bot_qa",
+      "source_id": 26,
+      "topic": "Phone and Online Fraud",
+      "question": "What should I do if I have transferred money to a fraudster?",
+      "variants": [],
+      "answer": "Immediately notify your bank and ask it to stop or block the transaction. Then file a report with the police. Save the data: receipts, conversations, numbers, links. The faster you act, the better.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 86,
+      "source": "bot_qa",
+      "source_id": 27,
+      "topic": "Phone and Online Fraud",
+      "question": "Can I give my bank card or account to another person?",
+      "variants": [],
+      "answer": "No. Giving a card, account or online banking details to anyone, or helping to “pass money through”, may be treated as participation in fraud schemes and leads to liability.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 87,
+      "source": "bot_qa",
+      "source_id": 28,
+      "topic": "Safety of Children and Teenagers",
+      "question": "What is bullying?",
+      "variants": [],
+      "answer": "Bullying is deliberately and repeatedly insulting, intimidating, harassing or isolating someone. It can happen face to face or on the internet (cyberbullying). Bullying is not normal; it is unacceptable to society and to the law.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 88,
+      "source": "bot_qa",
+      "source_id": 29,
+      "topic": "Safety of Children and Teenagers",
+      "question": "What should I do if I am insulted at school or online?",
+      "variants": [],
+      "answer": "Tell a trusted adult (a parent, a class teacher, a school psychologist). Save screenshots and messages. You can call the children's helpline 111. Being insulted is not your fault.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 89,
+      "source": "bot_qa",
+      "source_id": 30,
+      "topic": "Safety of Children and Teenagers",
+      "question": "Is there liability if I insult one of my friends?",
+      "variants": [],
+      "answer": "Yes. Insulting, intimidating or tormenting someone, and filming it and spreading the video, can lead to disciplinary liability and, in serious cases, administrative or criminal liability.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 90,
+      "source": "bot_qa",
+      "source_id": 31,
+      "topic": "Safety of Children and Teenagers",
+      "question": "What should I do if someone touches me in a way I don't like or asks for personal photos?",
+      "variants": [],
+      "answer": "Say “no”, leave the place or stop the conversation. Tell a trusted adult right away. Your body is yours. Asking for personal photos is dangerous, and demanding that you keep it secret is a warning sign. You are not to blame.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 91,
+      "source": "bot_qa",
+      "source_id": 32,
+      "topic": "Safety of Children and Teenagers",
+      "question": "What if an adult I don't know wants to talk with me privately on the internet?",
+      "variants": [],
+      "answer": "Be careful. Do not share your age, address, school or photos. A demand like “this is a secret, don't tell anyone” is a warning sign. End the conversation, block them, and tell an adult.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 92,
+      "source": "bot_qa",
+      "source_id": 33,
+      "topic": "Safety of Children and Teenagers",
+      "question": "From what age can a teenager work?",
+      "variants": [],
+      "answer": "Under labor legislation, generally from 16. Under certain conditions and with parental consent, light work may be permitted from 14. Work that is harmful or heavy for a child is prohibited.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 93,
+      "source": "bot_qa",
+      "source_id": 34,
+      "topic": "Domestic Violence",
+      "question": "What is domestic violence?",
+      "variants": [],
+      "answer": "Physical, psychological, sexual or economic violence within a family or close relationship: beating, threats, humiliation, control, depriving of money, and so on. This is not a private matter; it is something the law protects against.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 94,
+      "source": "bot_qa",
+      "source_id": 35,
+      "topic": "Domestic Violence",
+      "question": "What should I do if I am subjected to violence or witness it?",
+      "variants": [],
+      "answer": "If there is a threat of danger, go to a safe place and call 102 or 112. If you are injured, see a doctor: medical documents are important as evidence. The victim is not to blame.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 95,
+      "source": "bot_qa",
+      "source_id": 36,
+      "topic": "Domestic Violence",
+      "question": "What is a protection order?",
+      "variants": [],
+      "answer": "It is a document issued by the police that prohibits the person who committed violence from approaching the victim, contacting them, or taking other actions. To obtain one, you must apply to the police.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 96,
+      "source": "bot_qa",
+      "source_id": 37,
+      "topic": "Domestic Violence",
+      "question": "What evidence should be kept?",
+      "variants": [],
+      "answer": "Keep medical reports, photographs of injuries, threatening messages, audio and video recordings, witnesses' contact details, and copies of reports. It is best to keep them somewhere safe, such as with a trusted person or in the cloud.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 97,
+      "source": "bot_qa",
+      "source_id": 38,
+      "topic": "Consumer Rights and Contracts",
+      "question": "Can I return a poor-quality item?",
+      "variants": [],
+      "answer": "Yes. If an item has a defect, you have the right to demand its repair, replacement or a refund. Even a good-quality item, except for certain categories, can be exchanged within 14 days if it does not suit you. Keep the receipt and the packaging.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 98,
+      "source": "bot_qa",
+      "source_id": 39,
+      "topic": "Consumer Rights and Contracts",
+      "question": "Can I refuse goods I bought online?",
+      "variants": [],
+      "answer": "In most cases, yes. Goods purchased remotely can be returned upon receipt or within the period established by law. The specific conditions depend on the type of goods, so read the seller's rules beforehand.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 99,
+      "source": "bot_qa",
+      "source_id": 40,
+      "topic": "Consumer Rights and Contracts",
+      "question": "What should I check before signing a contract?",
+      "variants": [],
+      "answer": "Read everything in full: the price, term, penalties, termination conditions, hidden commissions. Ask about anything unclear. Never sign a blank form, and get your own copy of the contract.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 100,
+      "source": "bot_qa",
+      "source_id": 41,
+      "topic": "Consumer Rights and Contracts",
+      "question": "What should I consider when taking a loan or microloan?",
+      "variants": [],
+      "answer": "Carefully read the total amount payable, the interest rate, the term and the penalties for late payment. Work out in advance whether you can pay. Beware of unknown organizations and of anyone who asks for a fee upfront.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 101,
+      "source": "bot_qa",
+      "source_id": 42,
+      "topic": "Urgent Situations",
+      "question": "What are the emergency service numbers in Kazakhstan?",
+      "variants": [],
+      "answer": "101 – fire and rescue service; 102 – police; 103 – ambulance; 112 – unified rescue service (from a mobile phone); 111 – children's helpline.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 102,
+      "source": "bot_qa",
+      "source_id": 43,
+      "topic": "Urgent Situations",
+      "question": "What should I do if I witness a crime or a road accident?",
+      "variants": [],
+      "answer": "First ensure your own safety. Call the appropriate emergency service and state clearly the place and time of the incident, vehicle numbers and the people's distinguishing features. If possible, give first aid to the injured person and leave your contact details as a witness.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 103,
+      "source": "bot_qa",
+      "source_id": 44,
+      "topic": "Urgent Situations",
+      "question": "How should I act if there is a fire?",
+      "variants": [],
+      "answer": "Immediately call 101 or 112, begin evacuating people, and do not use the elevator. In a smoky area, move bent low and cover your mouth and nose with a damp cloth. Once you are out of the building, do not go back in.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 104,
+      "source": "bot_qa",
+      "source_id": 45,
+      "topic": "Urgent Situations",
+      "question": "What should I do if I don't feel safe?",
+      "variants": [],
+      "answer": "If possible, go to a place with many people, tell someone you trust, and call 102 or 112. Trust your instincts: leaving a dangerous situation is the right decision.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 105,
+      "source": "bot_qa",
+      "source_id": 46,
+      "topic": "Constitution and Civil Rights",
+      "question": "What is a constitution?",
+      "variants": [],
+      "answer": "A constitution is a country's fundamental law. It has the highest legal force, so other laws and regulations must not contradict the Constitution.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 106,
+      "source": "bot_qa",
+      "source_id": 47,
+      "topic": "Constitution and Civil Rights",
+      "question": "What are a citizen's fundamental rights?",
+      "variants": [],
+      "answer": "The right to life, personal liberty, privacy, freedom of speech, education, work, health protection, judicial protection, and other rights.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 107,
+      "source": "bot_qa",
+      "source_id": 48,
+      "topic": "Constitution and Civil Rights",
+      "question": "What are a citizen's fundamental duties?",
+      "variants": [],
+      "answer": "To observe the laws, pay taxes and mandatory payments, respect the rights of other people, defend the Fatherland, and preserve nature and the historical and cultural heritage.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 108,
+      "source": "bot_qa",
+      "source_id": 49,
+      "topic": "Constitution and Civil Rights",
+      "question": "What is equality before the law?",
+      "variants": [],
+      "answer": "Everyone is equal before the law and the court. No one may be discriminated against on the basis of origin, sex, nationality, language, religion, beliefs or social status.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 109,
+      "source": "bot_qa",
+      "source_id": 50,
+      "topic": "Constitution and Civil Rights",
+      "question": "Is freedom of speech unlimited?",
+      "variants": [],
+      "answer": "No. You have the right to express your opinion freely, but defamation, insult, incitement to violence and hatred, and disclosure of state secrets are restricted by law.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 110,
+      "source": "bot_qa",
+      "source_id": 51,
+      "topic": "Constitution and Civil Rights",
+      "question": "Are private life and the secrecy of correspondence protected?",
+      "variants": [],
+      "answer": "Yes. Telephone conversations, correspondence and private messages are considered confidential. They may be restricted only on the grounds and in the manner provided by law.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 111,
+      "source": "bot_qa",
+      "source_id": 53,
+      "topic": "Constitution and Civil Rights",
+      "question": "Do I have the right to a lawyer?",
+      "variants": [],
+      "answer": "Yes. In a criminal case, you have the right to use a lawyer's services from the moment you are detained as a suspect or accused. If you lack the funds, in cases provided by law a lawyer is appointed at the state's expense.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 112,
+      "source": "bot_qa",
+      "source_id": 54,
+      "topic": "Constitution and Civil Rights",
+      "question": "Can I apply to state bodies?",
+      "variants": [],
+      "answer": "Yes. Every person can submit a personal or collective application to a state body. A reasoned reply must be given to the application within the period established by law.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 113,
+      "source": "bot_qa",
+      "source_id": 55,
+      "topic": "Constitution and Civil Rights",
+      "question": "What are the state symbols?",
+      "variants": [],
+      "answer": "The State Flag, the State Emblem and the State Anthem. Respecting them is a citizen's duty, and insulting them may lead to liability under the law.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 114,
+      "source": "bot_qa",
+      "source_id": 56,
+      "topic": "Labor Law",
+      "question": "What must be formalized when hiring?",
+      "variants": [],
+      "answer": "A written employment contract must be concluded. It states the position, salary, working time, leave and the parties' duties. One copy of the contract stays with you.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 115,
+      "source": "bot_qa",
+      "source_id": 57,
+      "topic": "Labor Law",
+      "question": "What is the working time?",
+      "variants": [],
+      "answer": "In the general case, working time does not exceed 40 hours per week. Shortened hours are set for certain categories (for example, minors and those working in harmful conditions).",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 116,
+      "source": "bot_qa",
+      "source_id": 58,
+      "topic": "Labor Law",
+      "question": "How long is annual paid leave?",
+      "variants": [],
+      "answer": "In the general case, at least 24 calendar days. Longer leave is granted to certain categories (for example, minors).",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 117,
+      "source": "bot_qa",
+      "source_id": 59,
+      "topic": "Labor Law",
+      "question": "Can an employer delay wages?",
+      "variants": [],
+      "answer": "No. Wages must be paid within the period set by the employment contract and the law. If they are delayed, you can complain to the labor inspectorate or to court.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 118,
+      "source": "bot_qa",
+      "source_id": 60,
+      "topic": "Labor Law",
+      "question": "How long is a probationary period?",
+      "variants": [],
+      "answer": "In the general case, the probationary period does not exceed 3 months and must be stated in the contract in advance. Labor legislation also applies during the probationary period.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 119,
+      "source": "bot_qa",
+      "source_id": 61,
+      "topic": "Labor Law",
+      "question": "How is overtime paid?",
+      "variants": [],
+      "answer": "Work beyond the norm established by law usually requires additional pay or a day off. An employer may order overtime work only in cases provided by law.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 120,
+      "source": "bot_qa",
+      "source_id": 62,
+      "topic": "Labor Law",
+      "question": "What should I do if I am unlawfully dismissed?",
+      "variants": [],
+      "answer": "Ask for a copy of the order and apply to the labor inspectorate or to court. If the unlawful dismissal is proven, you can demand reinstatement and payment of wages. Do not miss the deadlines for appeal.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 121,
+      "source": "bot_qa",
+      "source_id": 63,
+      "topic": "Labor Law",
+      "question": "What do I need to do if I want to resign of my own accord?",
+      "variants": [],
+      "answer": "Submit a written application and give your employer advance notice within the period stated in the law or the contract. Demand your final settlement, as well as your employment record book or information about your employment.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 122,
+      "source": "bot_qa",
+      "source_id": 64,
+      "topic": "Labor Law",
+      "question": "What are a pregnant woman's labor rights?",
+      "variants": [],
+      "answer": "The right to pregnancy and maternity leave, the possibility of transfer to lighter work, and a ban on dismissal because of pregnancy. The length of maternity leave is, in the general case, 126 calendar days.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 123,
+      "source": "bot_qa",
+      "source_id": 65,
+      "topic": "Labor Law",
+      "question": "What if there is discrimination or pressure at work?",
+      "variants": [],
+      "answer": "Record the situation in writing and keep the evidence. First file a complaint through the internal procedure, then apply to the labor inspectorate, the prosecutor's office or the court.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 124,
+      "source": "bot_qa",
+      "source_id": 66,
+      "topic": "Labor Law",
+      "question": "Can I hand my foreign documents (passport) over to my employer?",
+      "variants": [],
+      "answer": "An employer has no right to retain a passport or identity card. You can provide a copy; you are not obliged to hand over the original.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 125,
+      "source": "bot_qa",
+      "source_id": 68,
+      "topic": "Family Law",
+      "question": "What is a marriage contract?",
+      "variants": [],
+      "answer": "It is a written agreement regulating the spouses' property rights and obligations. It is concluded before or during the marriage and is certified by a notary.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 126,
+      "source": "bot_qa",
+      "source_id": 70,
+      "topic": "Family Law",
+      "question": "What is child support and how much must be paid?",
+      "variants": [],
+      "answer": "Child support is the material support that a parent provides to a child. In the general case, 1/4 of income is paid for one child, 1/3 for two children, and 1/2 for three or more.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 127,
+      "source": "bot_qa",
+      "source_id": 71,
+      "topic": "Family Law",
+      "question": "What happens if child support is not paid?",
+      "variants": [],
+      "answer": "If there are arrears, they are recovered through enforcement proceedings. Prolonged non-payment may lead to liability, including restrictions.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 128,
+      "source": "bot_qa",
+      "source_id": 72,
+      "topic": "Family Law",
+      "question": "How are parental rights terminated?",
+      "variants": [],
+      "answer": "Deprivation of parental rights takes place only by court decision and on the grounds provided by law, for example: abandoning a child, abusing a child, or evading parental duties.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 129,
+      "source": "bot_qa",
+      "source_id": 73,
+      "topic": "Family Law",
+      "question": "How are guardianship and custodianship of a child arranged?",
+      "variants": [],
+      "answer": "You must apply to the guardianship and custodianship authority (usually the education department under the akimat). The authority will examine the situation and make a decision.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 130,
+      "source": "bot_qa",
+      "source_id": 74,
+      "topic": "Family Law",
+      "question": "How can an inheritance be accepted?",
+      "variants": [],
+      "answer": "The heir must apply to a notary and accept the inheritance within 6 months after the inheritance opens. If there is no will, the inheritance is divided by law in order of priority.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 131,
+      "source": "bot_qa",
+      "source_id": 75,
+      "topic": "Family Law",
+      "question": "Who are the first-priority heirs by law?",
+      "variants": [],
+      "answer": "In the first priority, as a rule, the deceased's children, spouse and parents inherit. A notary will explain the exact order of distribution.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 132,
+      "source": "bot_qa",
+      "source_id": 76,
+      "topic": "Family Law",
+      "question": "How is property divided between spouses?",
+      "variants": [],
+      "answer": "Property accumulated systematically during marriage is common property and is divided equally on division, unless a marriage contract provides otherwise. Personal property (acquired before marriage, received as a gift or inherited) is not divided.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 133,
+      "source": "bot_qa",
+      "source_id": 77,
+      "topic": "Housing and Real Estate",
+      "question": "What documents should there be when renting an apartment?",
+      "variants": [],
+      "answer": "A written lease agreement stating the price, term, payment procedure, the condition of the property and the parties' duties. The landlord should show a document confirming that they are the owner.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 134,
+      "source": "bot_qa",
+      "source_id": 78,
+      "topic": "Housing and Real Estate",
+      "question": "What should I check before buying an apartment?",
+      "variants": [],
+      "answer": "Check the owner, encumbrances (pledge, seizure), debts, who is registered at the property, and the lawfulness of the ownership. If possible, have a lawyer review the documents, and conclude the transaction only at a notary.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 135,
+      "source": "bot_qa",
+      "source_id": 79,
+      "topic": "Housing and Real Estate",
+      "question": "Can a landlord evict me at any time?",
+      "variants": [],
+      "answer": "No. The term of the lease and the procedure for its termination are stated in the contract. The landlord has no right to evict without grounds and without advance notice.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 136,
+      "source": "bot_qa",
+      "source_id": 80,
+      "topic": "Housing and Real Estate",
+      "question": "Does a landlord have the right to enter the home without notifying me in advance?",
+      "variants": [],
+      "answer": "No. During the lease period the home is in your possession, and the landlord must obtain consent to enter (unless the contract provides a different procedure).",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 137,
+      "source": "bot_qa",
+      "source_id": 81,
+      "topic": "Housing and Real Estate",
+      "question": "How do I get my security deposit back?",
+      "variants": [],
+      "answer": "The amount of the deposit and the conditions for its return should be written in the contract. If it is not returned, you can make a claim and, if necessary, go to court. Keep written evidence of the payment.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 138,
+      "source": "bot_qa",
+      "source_id": 82,
+      "topic": "Housing and Real Estate",
+      "question": "Can the property owner make claims about the property's appearance?",
+      "variants": [],
+      "answer": "They can if actual damage was caused to the property through your fault. There is no liability for normal wear and tear. When moving in, it is useful to photograph the condition of the property and sign an inventory report.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 139,
+      "source": "bot_qa",
+      "source_id": 83,
+      "topic": "Housing and Real Estate",
+      "question": "Who pays utility bills?",
+      "variants": [],
+      "answer": "It depends on the contract: usually the tenant pays for the services consumed, and the landlord pays the property tax. State everything clearly in the contract.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 140,
+      "source": "bot_qa",
+      "source_id": 84,
+      "topic": "Housing and Real Estate",
+      "question": "Where do I complain if neighbors disturb the peace?",
+      "variants": [],
+      "answer": "First speak politely with the neighbor, then turn to the apartment owners' cooperative or property owners' association (KSK/OSI), the local police inspector, or the police (102). Night-time noise may be an administrative offense.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 141,
+      "source": "bot_qa",
+      "source_id": 85,
+      "topic": "Road Traffic and Vehicle Safety",
+      "question": "What is the permitted speed in a built-up area?",
+      "variants": [],
+      "answer": "In the general case, speed in built-up areas must not exceed 60 km/h. If road signs indicate otherwise, follow the sign.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 142,
+      "source": "bot_qa",
+      "source_id": 86,
+      "topic": "Road Traffic and Vehicle Safety",
+      "question": "Is it mandatory to wear a seat belt?",
+      "variants": [],
+      "answer": "Yes. The driver and all passengers, including those in the back seat, must wear a seat belt.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 143,
+      "source": "bot_qa",
+      "source_id": 87,
+      "topic": "Road Traffic and Vehicle Safety",
+      "question": "How should children be transported in a car?",
+      "variants": [],
+      "answer": "Children must be transported in a child seat or special device suited to their age and height. Check the traffic rules for the rules on seating and transporting a child in the front seat.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 144,
+      "source": "bot_qa",
+      "source_id": 88,
+      "topic": "Road Traffic and Vehicle Safety",
+      "question": "Can I drive while intoxicated?",
+      "variants": [],
+      "answer": "No. Driving while intoxicated is strictly prohibited and results in administrative or criminal liability. If you have been drinking, call a taxi or let someone else drive.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 145,
+      "source": "bot_qa",
+      "source_id": 89,
+      "topic": "Road Traffic and Vehicle Safety",
+      "question": "Can I talk on the phone in the car?",
+      "variants": [],
+      "answer": "You must not talk on the phone while holding it in your hand: it distracts attention and increases the risk of an accident. If necessary, stop in a safe place.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 146,
+      "source": "bot_qa",
+      "source_id": 90,
+      "topic": "Road Traffic and Vehicle Safety",
+      "question": "What should I do if there is a road accident?",
+      "variants": [],
+      "answer": "Stop the vehicle, set out the hazard warning sign, call 112/102/103, and help the injured. You must not leave the scene. Before moving the vehicles, take photos.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 147,
+      "source": "bot_qa",
+      "source_id": 91,
+      "topic": "Road Traffic and Vehicle Safety",
+      "question": "Is driver insurance required?",
+      "variants": [],
+      "answer": "Yes. Vehicle owners must have compulsory insurance of the driver's civil liability. If you have no policy, a fine may be imposed.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 148,
+      "source": "bot_qa",
+      "source_id": 92,
+      "topic": "Road Traffic and Vehicle Safety",
+      "question": "Where should a pedestrian cross the road?",
+      "variants": [],
+      "answer": "At a pedestrian crossing. Assess the traffic light, the road sign and the vehicle's speed. At a pedestrian crossing, the driver must give way.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 149,
+      "source": "bot_qa",
+      "source_id": 93,
+      "topic": "Road Traffic and Vehicle Safety",
+      "question": "What rules apply when riding an electric scooter or a bicycle?",
+      "variants": [],
+      "answer": "Observe the traffic rules: give way, use lights and safety equipment (a helmet). There are age and location restrictions on riding, so check the local rules. Minors should ride under adult supervision.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 150,
+      "source": "bot_qa",
+      "source_id": 94,
+      "topic": "Road Traffic and Vehicle Safety",
+      "question": "From what age can I get a driver's license?",
+      "variants": [],
+      "answer": "In the general case, a category B driver's license is issued from age 18. Depending on the category, age limits may differ.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 151,
+      "source": "bot_qa",
+      "source_id": 95,
+      "topic": "Banking, Payments and Financial Security",
+      "question": "What should I do if my bank card is lost?",
+      "variants": [],
+      "answer": "Immediately contact the bank's support service and block the card. Then apply for a replacement card. If there are suspicious transactions, file an application to dispute them.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 152,
+      "source": "bot_qa",
+      "source_id": 96,
+      "topic": "Banking, Payments and Financial Security",
+      "question": "Can I get my money back if an unauthorized transaction was made?",
+      "variants": [],
+      "answer": "Notify the bank immediately, as quickly as possible, and submit a written complaint. The bank will investigate. It is important not to miss deadlines and not to have disclosed your data yourself.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 153,
+      "source": "bot_qa",
+      "source_id": 97,
+      "topic": "Banking, Payments and Financial Security",
+      "question": "To whom may I tell my CVV code and PIN?",
+      "variants": [],
+      "answer": "To no one. Neither bank employees, nor shop assistants, nor the police, nor buyers have the right to ask for them.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 154,
+      "source": "bot_qa",
+      "source_id": 98,
+      "topic": "Banking, Payments and Financial Security",
+      "question": "What should I know before taking out a loan?",
+      "variants": [],
+      "answer": "The total costs (the effective rate), the payment schedule, the conditions for early repayment, and the consequences of late payment. Work out in advance whether you can pay.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 155,
+      "source": "bot_qa",
+      "source_id": 99,
+      "topic": "Banking, Payments and Financial Security",
+      "question": "What should I do if I can't repay a debt?",
+      "variants": [],
+      "answer": "Contact the bank or lender early and ask about the possibility of restructuring or deferring payment. Not hiding and solving the problem as early as possible is the right way. If necessary, consult a lawyer.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 156,
+      "source": "bot_qa",
+      "source_id": 100,
+      "topic": "Banking, Payments and Financial Security",
+      "question": "Can debt collectors pressure me?",
+      "variants": [],
+      "answer": "No. When collecting a debt, threats, insults, night-time calls, and disclosing the debt to your relatives are unlawful. Complain about unlawful actions to the regulator or the police.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 157,
+      "source": "bot_qa",
+      "source_id": 101,
+      "topic": "Banking, Payments and Financial Security",
+      "question": "What happens if an individual goes bankrupt?",
+      "variants": [],
+      "answer": "The law provides a bankruptcy procedure for individuals: restructuring of debts or, in some cases, release from debts. The conditions and consequences are complex, so it is better to get a lawyer's advice.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 158,
+      "source": "bot_qa",
+      "source_id": 102,
+      "topic": "Banking, Payments and Financial Security",
+      "question": "What should I do when lending money to someone?",
+      "variants": [],
+      "answer": "Draw up a written agreement (receipt) for the loan, stating the amount, the term and the parties' personal data. If you lend by transfer, state the purpose of the payment. This will serve as evidence if a dispute arises.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 159,
+      "source": "bot_qa",
+      "source_id": 103,
+      "topic": "Banking, Payments and Financial Security",
+      "question": "If I know someone's card number, can I get money?",
+      "variants": [],
+      "answer": "No. Knowing a card number does not give access to the money, and using it unlawfully together with other data is considered fraud and results in liability.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 160,
+      "source": "bot_qa",
+      "source_id": 104,
+      "topic": "Banking, Payments and Financial Security",
+      "question": "Is there a deposit protection system?",
+      "variants": [],
+      "answer": "Yes, Kazakhstan has a deposit guarantee system, which compensates a certain part of deposits when a bank goes bankrupt. Check the specific limits in an official source.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 161,
+      "source": "bot_qa",
+      "source_id": 105,
+      "topic": "Protection of Personal Data",
+      "question": "What is personal data?",
+      "variants": [],
+      "answer": "Any information relating directly or indirectly to an individual: full name, IIN, phone number, address, photo, biometric data, and so on.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 162,
+      "source": "bot_qa",
+      "source_id": 106,
+      "topic": "Protection of Personal Data",
+      "question": "Is consent required to collect and process my data?",
+      "variants": [],
+      "answer": "In most cases, yes. Processing data usually requires the individual's consent, except where the law provides otherwise. Before giving consent, ask what it is needed for.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 163,
+      "source": "bot_qa",
+      "source_id": 107,
+      "topic": "Protection of Personal Data",
+      "question": "To whom can I give my IIN?",
+      "variants": [],
+      "answer": "Only when there is a legal need and to trusted organizations: state bodies, banks, an employer. Do not give it to unknown websites or private individuals.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 164,
+      "source": "bot_qa",
+      "source_id": 108,
+      "topic": "Protection of Personal Data",
+      "question": "Can I give my EDS (electronic digital signature) to someone else?",
+      "variants": [],
+      "answer": "No. An EDS is the electronic equivalent of your signature; never give it to another person, not even close relatives. You are responsible for the consequences of its use.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 165,
+      "source": "bot_qa",
+      "source_id": 109,
+      "topic": "Protection of Personal Data",
+      "question": "How do I protect myself when sending copies of documents?",
+      "variants": [],
+      "answer": "On the copy, write “only for …”, state the purpose and date, and add a watermark. Hide unnecessary data (IIN, address). Send only through trusted channels.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 166,
+      "source": "bot_qa",
+      "source_id": 110,
+      "topic": "Protection of Personal Data",
+      "question": "Can surveillance cameras film me?",
+      "variants": [],
+      "answer": "Video surveillance for public and security purposes may exist. But unlawful interference with private life, for example installing a video camera in a changing area, is unlawful.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 167,
+      "source": "bot_qa",
+      "source_id": 111,
+      "topic": "Protection of Personal Data",
+      "question": "How do I know that my data has fallen into the wrong hands?",
+      "variants": [],
+      "answer": "Suspicious calls and messages, unknown activity on your account, attempts to log in to your accounts. Change your passwords, turn on two-factor authentication, and notify the bank and the police.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 168,
+      "source": "bot_qa",
+      "source_id": 112,
+      "topic": "Protection of Personal Data",
+      "question": "Can I have my data deleted?",
+      "variants": [],
+      "answer": "In certain cases, yes: you can withdraw consent and demand deletion of the data or the cessation of processing. To do so, a written application is submitted to the organization processing the data.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 169,
+      "source": "bot_qa",
+      "source_id": 113,
+      "topic": "Right to Education",
+      "question": "Is school attendance mandatory?",
+      "variants": [],
+      "answer": "Yes. The state ensures compulsory secondary education, and parents are obliged to ensure that their child receives an education.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 170,
+      "source": "bot_qa",
+      "source_id": 114,
+      "topic": "Right to Education",
+      "question": "Are textbooks free at school?",
+      "variants": [],
+      "answer": "In state schools, textbooks are provided free of charge from the library. Mandatory payments for additional teaching materials must not be required.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 171,
+      "source": "bot_qa",
+      "source_id": 115,
+      "topic": "Right to Education",
+      "question": "Is a teacher entitled to hit or insult a student?",
+      "variants": [],
+      "answer": "No. Corporal punishment and insults are strictly prohibited at school. If this happens, tell the school principal, the education department or the police.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 172,
+      "source": "bot_qa",
+      "source_id": 116,
+      "topic": "Right to Education",
+      "question": "Can the school administration unlawfully expel me?",
+      "variants": [],
+      "answer": "Expelling a student from school is carried out only on the grounds and in the manner provided by law. If you disagree with the decision, you can complain to the education department, the prosecutor's office or the court.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 173,
+      "source": "bot_qa",
+      "source_id": 117,
+      "topic": "Right to Education",
+      "question": "How do I appeal the result of the Unified National Testing (UNT)?",
+      "variants": [],
+      "answer": "If you disagree with the result, you can file an appeal. Confirm the deadlines and procedure with the testing organization or on the official website.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 174,
+      "source": "bot_qa",
+      "source_id": 118,
+      "topic": "Right to Education",
+      "question": "How is an education grant awarded?",
+      "variants": [],
+      "answer": "A grant is awarded on a competitive basis based on test results, the chosen specialty and other conditions. Requirements may change every year, so check the official information.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 175,
+      "source": "bot_qa",
+      "source_id": 119,
+      "topic": "Right to Education",
+      "question": "Do I have the right to inclusive education?",
+      "variants": [],
+      "answer": "Yes. Children with special educational needs have the right to inclusive education. Parents can turn to psychological and pedagogical support centers.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 176,
+      "source": "bot_qa",
+      "source_id": 120,
+      "topic": "Right to Education",
+      "question": "Does a student have the right to safety at school?",
+      "variants": [],
+      "answer": "Yes. The school must ensure students' safety and prevent bullying and violence. If safety is violated, submit a written application to the administration.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 177,
+      "source": "bot_qa",
+      "source_id": 121,
+      "topic": "Healthcare and Medical Rights",
+      "question": "What is free medical care?",
+      "variants": [],
+      "answer": "It is a certain volume of medical care guaranteed by the state. It includes emergency care and other services. Check the specific list in an official source.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 178,
+      "source": "bot_qa",
+      "source_id": 122,
+      "topic": "Healthcare and Medical Rights",
+      "question": "What is mandatory social health insurance (MSHI/OSMS)?",
+      "variants": [],
+      "answer": "It is a system of medical care financed by contributions from employers and citizens. You can check your insurance status through eGov or your personal account.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 179,
+      "source": "bot_qa",
+      "source_id": 123,
+      "topic": "Healthcare and Medical Rights",
+      "question": "Is a doctor obliged to keep a diagnosis confidential?",
+      "variants": [],
+      "answer": "Yes. Medical confidentiality is protected by law. Information may be disclosed to third parties only in cases provided by law.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 180,
+      "source": "bot_qa",
+      "source_id": 124,
+      "topic": "Healthcare and Medical Rights",
+      "question": "Can I refuse treatment?",
+      "variants": [],
+      "answer": "An adult of sound mind may refuse treatment, but the doctor must explain the consequences. In some cases provided by law (for example, dangerous infections), special rules apply.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 181,
+      "source": "bot_qa",
+      "source_id": 125,
+      "topic": "Healthcare and Medical Rights",
+      "question": "What is informed consent?",
+      "variants": [],
+      "answer": "Before treatment or surgery, the doctor must explain the diagnosis, the methods, the risks and the alternative options, and obtain the patient's consent.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 182,
+      "source": "bot_qa",
+      "source_id": 126,
+      "topic": "Healthcare and Medical Rights",
+      "question": "What should I do if a doctor makes a mistake?",
+      "variants": [],
+      "answer": "Ask for a copy of your medical records, submit a written complaint to the organization's management, and, if necessary, apply to the healthcare supervisory authority or to court.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 183,
+      "source": "bot_qa",
+      "source_id": 127,
+      "topic": "Healthcare and Medical Rights",
+      "question": "When should an ambulance be called?",
+      "variants": [],
+      "answer": "When life is at risk: loss of consciousness, heavy bleeding, chest pain, difficulty breathing, serious injury, signs of a stroke. In these cases call 103 or 112.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 184,
+      "source": "bot_qa",
+      "source_id": 128,
+      "topic": "Healthcare and Medical Rights",
+      "question": "Can I buy medicines without a prescription?",
+      "variants": [],
+      "answer": "Some medicines are sold without a prescription, while strong-acting medicines require one. Beware of self-medicating and exceeding the dose, and consult a doctor.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 185,
+      "source": "bot_qa",
+      "source_id": 129,
+      "topic": "State Services and Documents",
+      "question": "What is eGov.kz?",
+      "variants": [],
+      "answer": "It is the electronic government portal, where you can obtain certificates, submit applications and receive other state services online. Its mobile version is eGov mobile.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 186,
+      "source": "bot_qa",
+      "source_id": 130,
+      "topic": "State Services and Documents",
+      "question": "What is a PSC (CON)?",
+      "variants": [],
+      "answer": "These are the centers of the “Government for Citizens” State Corporation, where many state services are provided in one place: documents, registration, certificates.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 187,
+      "source": "bot_qa",
+      "source_id": 131,
+      "topic": "State Services and Documents",
+      "question": "From what age can I get an identity card?",
+      "variants": [],
+      "answer": "An identity card is issued at the age of 16. Before that, minors are identified by a birth certificate or another document.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 188,
+      "source": "bot_qa",
+      "source_id": 132,
+      "topic": "State Services and Documents",
+      "question": "What should I do if I lose my documents?",
+      "variants": [],
+      "answer": "Contact the relevant body (PSC, police) and submit an application to restore the document. Notify your bank and organizations. If necessary, the document is blocked.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 189,
+      "source": "bot_qa",
+      "source_id": 133,
+      "topic": "State Services and Documents",
+      "question": "How can I get an electronic digital signature?",
+      "variants": [],
+      "answer": "Through a PSC or the online portal. For security, keep your password safe and do not give your key to anyone else.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 190,
+      "source": "bot_qa",
+      "source_id": 134,
+      "topic": "State Services and Documents",
+      "question": "What should I do if a state service is delayed?",
+      "variants": [],
+      "answer": "The time limits for providing a service are set in the standards. If they are exceeded, you can complain to the service provider, then to a higher body or to court.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 191,
+      "source": "bot_qa",
+      "source_id": 135,
+      "topic": "State Services and Documents",
+      "question": "How can I find out what information about me is held by state bodies?",
+      "variants": [],
+      "answer": "Through your eGov account you can view a lot of information: registration, property, statuses. If there is an error, you can submit an application to correct it.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 192,
+      "source": "bot_qa",
+      "source_id": 136,
+      "topic": "State Services and Documents",
+      "question": "What rights does a foreign citizen have in Kazakhstan?",
+      "variants": [],
+      "answer": "Foreigners enjoy the rights provided by law and perform duties. The procedure for residence, work and registration depends on citizenship and status. Clarify your specific situation with the migration service.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 193,
+      "source": "bot_qa",
+      "source_id": 137,
+      "topic": "Court and Administrative Procedures",
+      "question": "How can I file a claim in court?",
+      "variants": [],
+      "answer": "A statement of claim is submitted in writing or electronically (through the court account). It states the court, the parties, the claim, the grounds and the evidence, and state duty is paid (unless there is an exemption).",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 194,
+      "source": "bot_qa",
+      "source_id": 138,
+      "topic": "Court and Administrative Procedures",
+      "question": "What is state duty?",
+      "variants": [],
+      "answer": "It is a mandatory fee paid when applying to court or receiving certain services. The amount depends on the type of claim, and there are exemptions for certain categories.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 195,
+      "source": "bot_qa",
+      "source_id": 139,
+      "topic": "Court and Administrative Procedures",
+      "question": "What is mediation?",
+      "variants": [],
+      "answer": "It is a way of resolving a dispute without going to court with the help of a neutral intermediary (a mediator). It can save time and costs and help reach an agreement quickly.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 196,
+      "source": "bot_qa",
+      "source_id": 140,
+      "topic": "Court and Administrative Procedures",
+      "question": "What should I do if I disagree with a ruling imposing a fine?",
+      "variants": [],
+      "answer": "The period for appealing a ruling is limited (most often 10 days). Submit your appeal to a higher body or to court. If the period passes, the ruling enters into legal force.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 197,
+      "source": "bot_qa",
+      "source_id": 141,
+      "topic": "Court and Administrative Procedures",
+      "question": "What happens if I don't pay a fine?",
+      "variants": [],
+      "answer": "An unpaid fine may be recovered by force, and sometimes restrictions may be imposed. The payment deadline and the conditions for the discount are stated in the ruling.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 198,
+      "source": "bot_qa",
+      "source_id": 142,
+      "topic": "Court and Administrative Procedures",
+      "question": "Is a representative (a lawyer) needed in court?",
+      "variants": [],
+      "answer": "It is not mandatory, but in complex cases a lawyer's help is useful. A lawyer needs a power of attorney certified by a notary or other authority.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 199,
+      "source": "bot_qa",
+      "source_id": 143,
+      "topic": "Court and Administrative Procedures",
+      "question": "What should I do if I disagree with a court decision?",
+      "variants": [],
+      "answer": "An appeal may be filed against the decision. The period is limited by law and is stated in the court's decision after it is issued. If necessary, consult a lawyer and do not miss the deadline.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 200,
+      "source": "bot_qa",
+      "source_id": 144,
+      "topic": "Court and Administrative Procedures",
+      "question": "What are enforcement proceedings?",
+      "variants": [],
+      "answer": "This is the procedure for compulsory enforcement of a court decision. A bailiff recovers the debt: freezing accounts, selling property, and so on.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 201,
+      "source": "bot_qa",
+      "source_id": 145,
+      "topic": "Court and Administrative Procedures",
+      "question": "Am I obliged to go if I am summoned as a witness?",
+      "variants": [],
+      "answer": "Yes, a summoned witness is obliged by law to appear and give truthful testimony. Giving false testimony leads to liability. A witness has the right to refuse to testify against themselves or their close relatives.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 202,
+      "source": "bot_qa",
+      "source_id": 146,
+      "topic": "Court and Administrative Procedures",
+      "question": "Where do I go for protection and legal aid?",
+      "variants": [],
+      "answer": "A bar association, the justice authorities, legal aid centers, the Human Rights Commissioner. Clarify the conditions for free aid in advance.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 203,
+      "source": "bot_qa",
+      "source_id": 147,
+      "topic": "Social Networks and Digital Ethics",
+      "question": "Can I spread false information on social media?",
+      "variants": [],
+      "answer": "No. Spreading false information, especially messages that harm public order or someone's honor, may lead to liability. Verify information before spreading it.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 204,
+      "source": "bot_qa",
+      "source_id": 148,
+      "topic": "Social Networks and Digital Ethics",
+      "question": "Can I infringe someone's copyright?",
+      "variants": [],
+      "answer": "Using someone else's photos, videos, music and text without permission may infringe copyright. Credit the source and check the license terms.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 205,
+      "source": "bot_qa",
+      "source_id": 149,
+      "topic": "Social Networks and Digital Ethics",
+      "question": "Can I make a deepfake (an artificial video)?",
+      "variants": [],
+      "answer": "Creating and spreading fake content featuring a person without their consent may be treated as interference with private life, defamation or fraud, and gives rise to legal liability.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 206,
+      "source": "bot_qa",
+      "source_id": 150,
+      "topic": "Social Networks and Digital Ethics",
+      "question": "Is it safe to take part in challenges and dangerous trends?",
+      "variants": [],
+      "answer": "Do not take part in challenges that endanger you or others. They lead to injuries and sometimes to liability. Try to stop your friends too.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 207,
+      "source": "bot_qa",
+      "source_id": 151,
+      "topic": "Social Networks and Digital Ethics",
+      "question": "How can I spot a giveaway scam?",
+      "variants": [],
+      "answer": "An unknown account, prepayment or a request for personal data, and artificial time pressure are warning signs. Check for confirmation from the official organization and do not follow links.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 208,
+      "source": "bot_qa",
+      "source_id": 152,
+      "topic": "Social Networks and Digital Ethics",
+      "question": "What rules apply to bloggers and advertising?",
+      "variants": [],
+      "answer": "Advertising must be labeled as advertising, must not make false promises, and must not deceive consumers. Advertising illegal goods leads to liability.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 209,
+      "source": "bot_qa",
+      "source_id": 153,
+      "topic": "Social Networks and Digital Ethics",
+      "question": "Can I post a photo of a young child online?",
+      "variants": [],
+      "answer": "A parent can post a photo of their own child, but beware of pictures in which the address, school or personal data are visible. Publishing the personal circumstances of minors may harm them.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 210,
+      "source": "bot_qa",
+      "source_id": 154,
+      "topic": "Social Networks and Digital Ethics",
+      "question": "What should I do to protect my rights online?",
+      "variants": [],
+      "answer": "Save links and screenshots, report to the platform (Report), and, if necessary, apply to the police or to court. Do not commit unlawful acts yourself in response.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 211,
+      "source": "bot_qa",
+      "source_id": 155,
+      "topic": "Drugs, Alcohol and Tobacco",
+      "question": "Is it legal to keep, buy or distribute drugs?",
+      "variants": [],
+      "answer": "No. Unlawful acts with narcotic substances (purchase, possession, transportation, sale) lead to strict liability, criminal in serious cases.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 212,
+      "source": "bot_qa",
+      "source_id": 156,
+      "topic": "Drugs, Alcohol and Tobacco",
+      "question": "What should I do if I am offered drug dealing as “easy money”?",
+      "variants": [],
+      "answer": "Refuse. Such “work” is a crime, and involving teenagers is a serious offense. Report the offer to 102.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 213,
+      "source": "bot_qa",
+      "source_id": 157,
+      "topic": "Drugs, Alcohol and Tobacco",
+      "question": "What should I do if my friends use drugs?",
+      "variants": [],
+      "answer": "Stay away from the dangerous environment and tell a trusted adult. Anonymous addiction treatment help is available. It is important to support the person using and guide them toward professional help.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 214,
+      "source": "bot_qa",
+      "source_id": 158,
+      "topic": "Drugs, Alcohol and Tobacco",
+      "question": "From what age can I buy alcohol?",
+      "variants": [],
+      "answer": "The sale and purchase of alcohol and tobacco products is permitted from the age of 21. Selling to persons under 21 is prohibited.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 215,
+      "source": "bot_qa",
+      "source_id": 159,
+      "topic": "Drugs, Alcohol and Tobacco",
+      "question": "Are there restrictions on vapes and e-cigarettes?",
+      "variants": [],
+      "answer": "Yes. They are also treated as tobacco products, and selling them to persons under 21 is prohibited. And their harm to health has been proven by research.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 216,
+      "source": "bot_qa",
+      "source_id": 160,
+      "topic": "Drugs, Alcohol and Tobacco",
+      "question": "Can I drink alcohol in a public place?",
+      "variants": [],
+      "answer": "Drinking alcohol in public places and being intoxicated may lead to administrative liability. The specific restrictions depend on local rules.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 217,
+      "source": "bot_qa",
+      "source_id": 161,
+      "topic": "Security, Extremism and Terrorism",
+      "question": "What should I do if I see a suspicious object or an unattended bag?",
+      "variants": [],
+      "answer": "Do not touch it, move people away, and report it immediately to 102 or 112. State the location and appearance precisely.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 218,
+      "source": "bot_qa",
+      "source_id": 162,
+      "topic": "Security, Extremism and Terrorism",
+      "question": "Is it legal to give a false terrorism report (saying there is a bomb)?",
+      "variants": [],
+      "answer": "No. A false report is a crime, it seriously disrupts the work of the services, and it leads to strict liability. It is not a “joke”.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 219,
+      "source": "bot_qa",
+      "source_id": 163,
+      "topic": "Security, Extremism and Terrorism",
+      "question": "What is extremism?",
+      "variants": [],
+      "answer": "These are views and actions that call for violence, religious, national or social hatred, or violation of public order. Spreading such materials leads to liability.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 220,
+      "source": "bot_qa",
+      "source_id": 164,
+      "topic": "Security, Extremism and Terrorism",
+      "question": "What should I do if I am drawn into a radical group online?",
+      "variants": [],
+      "answer": "Stop the conversation, block them, save screenshots, and report to the police or a trusted adult. Such groups attract teenagers and manipulate them.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 221,
+      "source": "bot_qa",
+      "source_id": 165,
+      "topic": "Security, Extremism and Terrorism",
+      "question": "What are the rules on taking part in assemblies or rallies?",
+      "variants": [],
+      "answer": "Holding a peaceful assembly is carried out in the manner provided by law. Clarify the specific requirements with the local executive body. Taking part in unauthorized or violent gatherings may lead to liability.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    },
+    {
+      "id": 222,
+      "source": "bot_qa",
+      "source_id": 166,
+      "topic": "Security, Extremism and Terrorism",
+      "question": "Can I keep a weapon?",
+      "variants": [],
+      "answer": "The circulation of weapons is strictly regulated, and a special permit is required. Keeping, carrying or transferring one without a permit leads to liability. Observe safety measures.",
+      "legal_basis": [],
+      "confidence": "general",
+      "as_of": null
+    }
+  ]
+}

@@ -1,23 +1,34 @@
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from bot.i18n import messages as translations
+from bot.i18n import LANGUAGE_LABELS, SUPPORTED_LANGUAGES, messages as translations
 
 
-def menu_button() -> InlineKeyboardButton:
-    return InlineKeyboardButton(text=translations()["menu_button"], callback_data="menu:main")
+def menu_button(language: str = "kk") -> InlineKeyboardButton:
+    return InlineKeyboardButton(text=translations(language)["menu_button"], callback_data="menu:main")
 
 
-def main_menu() -> InlineKeyboardMarkup:
+def main_menu(language: str = "kk") -> InlineKeyboardMarkup:
+    text = translations(language)
     return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="📚 Тақырыптар", callback_data="topics:0")],
-        [InlineKeyboardButton(text="🚨 Шұғыл көмек", callback_data="emergency")],
+        [InlineKeyboardButton(text=text["topics_button"], callback_data="topics:0")],
+        [InlineKeyboardButton(text=text["emergency_button"], callback_data="emergency")],
         [
-            InlineKeyboardButton(text=translations()["help_button"], callback_data="menu:help"),
+            InlineKeyboardButton(text=text["help_button"], callback_data="menu:help"),
         ],
+        [InlineKeyboardButton(text=text["language_button"], callback_data="menu:language")],
     ])
 
 
-def topics_keyboard(topics: list[str], page: int) -> InlineKeyboardMarkup:
+def language_keyboard(language: str = "kk") -> InlineKeyboardMarkup:
+    rows = [
+        [InlineKeyboardButton(text=LANGUAGE_LABELS[code], callback_data=f"language:{code}")]
+        for code in SUPPORTED_LANGUAGES
+    ]
+    rows.append([menu_button(language)])
+    return InlineKeyboardMarkup(inline_keyboard=rows)
+
+
+def topics_keyboard(topics: list[str], page: int, language: str = "kk") -> InlineKeyboardMarkup:
     page_size = 8
     start = page * page_size
     rows = [
@@ -31,11 +42,11 @@ def topics_keyboard(topics: list[str], page: int) -> InlineKeyboardMarkup:
         nav.append(InlineKeyboardButton(text="➡️", callback_data=f"topics:{page + 1}"))
     if nav:
         rows.append(nav)
-    rows.append([menu_button()])
+    rows.append([menu_button(language)])
     return InlineKeyboardMarkup(inline_keyboard=rows)
 
 
-def question_keyboard(records, page: int) -> InlineKeyboardMarkup:
+def question_keyboard(records, page: int, language: str = "kk") -> InlineKeyboardMarkup:
     page_size = 8
     start = page * page_size
     rows = [
@@ -50,14 +61,14 @@ def question_keyboard(records, page: int) -> InlineKeyboardMarkup:
     if nav:
         rows.append(nav)
     rows.append([InlineKeyboardButton(
-        text=translations()["back_to_topics"],
+        text=translations(language)["back_to_topics"],
         callback_data="topics:0",
     )])
-    rows.append([menu_button()])
+    rows.append([menu_button(language)])
     return InlineKeyboardMarkup(inline_keyboard=rows)
 
 
-def matches_keyboard(results) -> InlineKeyboardMarkup:
+def matches_keyboard(results, language: str = "kk") -> InlineKeyboardMarkup:
     rows = [
         [InlineKeyboardButton(
             text=f"{index}. {result.record.question[:70]}",
@@ -65,11 +76,16 @@ def matches_keyboard(results) -> InlineKeyboardMarkup:
         )]
         for index, result in enumerate(results[:3], start=1)
     ]
-    rows.append([menu_button()])
+    rows.append([menu_button(language)])
     return InlineKeyboardMarkup(inline_keyboard=rows)
 
 
-def rating_keyboard(record_id: int | None, *, show_details: bool = False) -> InlineKeyboardMarkup:
+def rating_keyboard(
+    record_id: int | None,
+    *,
+    show_details: bool = False,
+    language: str = "kk",
+) -> InlineKeyboardMarkup:
     rid = record_id or 0
     rows = [
         [
@@ -78,6 +94,9 @@ def rating_keyboard(record_id: int | None, *, show_details: bool = False) -> Inl
         ],
     ]
     if show_details and record_id is not None:
-        rows.append([InlineKeyboardButton(text=translations()["more_details"], callback_data=f"detail:{record_id}")])
-    rows.append([menu_button()])
+        rows.append([InlineKeyboardButton(
+            text=translations(language)["more_details"],
+            callback_data=f"detail:{record_id}",
+        )])
+    rows.append([menu_button(language)])
     return InlineKeyboardMarkup(inline_keyboard=rows)

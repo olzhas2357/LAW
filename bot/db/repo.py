@@ -4,6 +4,7 @@ from pathlib import Path
 import aiosqlite
 
 from bot.services.safety import mask_pii
+from bot.i18n import SUPPORTED_LANGUAGES
 
 
 class Repository:
@@ -18,7 +19,8 @@ class Repository:
                 PRAGMA journal_mode=WAL;
                 CREATE TABLE IF NOT EXISTS users (
                     user_id INTEGER PRIMARY KEY,
-                    created_at TEXT NOT NULL
+                    created_at TEXT NOT NULL,
+                    language TEXT NOT NULL DEFAULT 'kk'
                 );
                 CREATE TABLE IF NOT EXISTS questions (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -55,14 +57,40 @@ class Repository:
                 CREATE INDEX IF NOT EXISTS idx_unanswered_date ON unanswered(created_at);
                 """
             )
+            columns = await (await db.execute("PRAGMA table_info(users)")).fetchall()
+            if "language" not in {column[1] for column in columns}:
+                await db.execute(
+                    "ALTER TABLE users ADD COLUMN language TEXT NOT NULL DEFAULT 'kk'"
+                )
             await db.commit()
         await self.prune_logs(90)
 
-    async def register_user(self, user_id: int) -> None:
+    async def register_user(self, user_id: int, language: str = "kk") -> None:
+        if language not in SUPPORTED_LANGUAGES:
+            raise ValueError(f"Unsupported language: {language}")
         async with aiosqlite.connect(self.path) as db:
             await db.execute(
-                "INSERT OR IGNORE INTO users(user_id, created_at) VALUES (?, ?)",
-                (user_id, self._now()),
+                "INSERT OR IGNORE INTO users(user_id, created_at, language) VALUES (?, ?, ?)",
+                (user_id, self._now(), language),
+            )
+            await db.commit()
+
+    async def get_language(self, user_id: int) -> str | None:
+        async with aiosqlite.connect(self.path) as db:
+            row = await (await db.execute(
+                "SELECT language FROM users WHERE user_id = ?",
+                (user_id,),
+            )).fetchone()
+            return row[0] if row else None
+
+    async def set_language(self, user_id: int, language: str) -> None:
+        if language not in SUPPORTED_LANGUAGES:
+            raise ValueError(f"Unsupported language: {language}")
+        async with aiosqlite.connect(self.path) as db:
+            await db.execute(
+                "INSERT INTO users(user_id, created_at, language) VALUES (?, ?, ?) "
+                "ON CONFLICT(user_id) DO UPDATE SET language = excluded.language",
+                (user_id, self._now(), language),
             )
             await db.commit()
 

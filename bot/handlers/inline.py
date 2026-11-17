@@ -8,6 +8,7 @@ router = Router(name="inline")
 
 @router.inline_query()
 async def inline_search(query: InlineQuery, runtime) -> None:
+    language = getattr(runtime, "language", "kk")
     results = await runtime.search.search(query.query, limit=5)
     articles = [
         InlineQueryResultArticle(
@@ -15,7 +16,12 @@ async def inline_search(query: InlineQuery, runtime) -> None:
             title=result.record.question[:128],
             description=result.record.answer[:200],
             input_message_content=InputTextMessageContent(
-                message_text=format_answer(result.record.answer, result.record, runtime.disclaimer)
+                message_text=format_answer(
+                    result.record.answer,
+                    result.record,
+                    runtime.disclaimer,
+                    language,
+                )
             ),
         )
         for result in results
